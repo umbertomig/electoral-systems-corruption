@@ -1,17 +1,14 @@
 ---
 title:  |
-        | Legislature Size and Welfare:
-        | Evidence from Brazil
+        | Electoral Systems, Competition, and Incentives for Corruption
 author: 
-  - Gabriel Cepaluni[^gabriel]
-  - Danilo Freire[^danilo]
   - Umberto Mignozzetti[^umberto]
 date: \today
-thanks: "We thank Cedric Antunes, Victor Araujo, Eric Arias, Taylor Boas, Natalia Bueno, Andrea Freitas, Saad Gulzar, James Mahon, Lucas Novaes, Nelson Ruiz, Catarina Roman, David Skarbek, and Denis Stukal for their valuable comments. We also thank the participants of seminars and conferences at CEPESP, CUNY, INSPER, IPSA, LACEA, LASA, MPSA, Notre Dame, NYU, PUC Chile, SPSA, and Uppsala. We gratefully acknowledge the financial support of the São Paulo Research Foundation (FAPESP), grant number 2017/07290-5. All materials required to replicate this study are available at <https://github.com/umbertomig/legislature-size-welfare>."
-abstract: "What is the effect of legislature size on social welfare? While the literature suggests that increasing the number of legislators broadens political representation and raises government expenditures, its implications for public service provision remain understudied. In this paper, we exploit exogenous changes in city-council size in Brazil and show that adding a legislator increases education and healthcare indicators. XXXX Education quality and preventive health care remain unaffected, but primary school enrolment and infant mortality significantly improve. To investigate the mechanism, we surveyed former councillors and analysed 346,553 bills proposed between 2005 and 2008. This analysis shows that politicians prefer to provide private and targeted goods instead of public goods. This paper has implications for the design of legislative institutions."
+thanks: "I thank Livio DiLonardo, Saad Gulzar, Cathy Hafer, Carlo Holz, Dimitri Landa, Adam Przeworski, Howard Rosenthal, Renard Sexton, Denis Stukal, and Scott Tyson for their comments. I also thank participants at APSA, MPSA, NYU PE Seminar, and SPSA. All materials required to replicate this study are available at <https://github.com/umbertomig/electoral-systems-corruption>."
+abstract: "This is my abstract."
 abstractspacing: double
-keywords: Legislature size; Legislative politics; Public goods provision; Regression discontinuity design; Brazil
-jelcodes: HXXXX
+keywords: Political Corruption; District Magnitude; Single-member districts; Multi-member districts; Welfare; Brazil
+#jelcodes: HXXXX
 fontsize: 11pt
 margin: 2cm
 urlcolor: darkblue
@@ -45,370 +42,32 @@ knitr::opts_chunk$set(echo = TRUE)
 
 [^umberto]: Visiting Assistant Professor, Quantitative Theory and Methods Department, Emory University, <umberto.mignozzetti@emory.edu>, <http://umbertomig.com>. Corresponding author.
 
-[^danilo]: Senior Lecturer, School of Social and Political Sciences, University of Lincoln, <danilofreire@gmail.com>, <https://danilofreire.github.io>.
-
-[^gabriel]: Associate Professor, Department of International Relations, São Paulo State University, <gabi.cepal@gmail.com>.
-
 \newpage
 
 # Introduction
 \label{sec:intro}
 
-Legislative institutions are crucial for welfare and service provision in democratic countries. Historically, the division of power and the birth of a representative government placed the legislatures at the center of popular consent \citep{north1989constitutions}. In modern democracies, most countries have assemblies at all levels of government. These institutions affect the information and quality of legislation \citep{krehbiel2010information}, check and veto the other political powers \citep{tsebelis2002veto}, and influence policymaking \citep{weingast1988industrial, north1989constitutions, auriol2012optimal}. Moreover, they also determine taxation, government expenditure \citep{Weingastetal1981, PrimoSnyder2008, stasavage2011states}, and oversee service provision \citep{mccubbins1984congressional, poulsen2018political}.
+Here goes the intro.
 
-Regardless of differences in electoral rules, social composition, and procedures, all legislatures share one feature: more than one representative composes them. Legislature size relates to collective action problems \citep{crain1979cost, rogers2002free}, government spending \citep{Weingastetal1981, PrimoSnyder2008}, and representation \citep{allenrepresentation}, but how these components affect welfare remain understudied. On the one hand, enlarged legislatures increase government spending and lawmaking, and this may improve some services \citep{Weingastetal1981, }. On the other hand, adding a legislator can increase the number of veto players and broaden the collective action problems, hindering service provision. Therefore, larger legislatures have an ambiguous effect on welfare, and XXXX.
-
-In this paper, we propose a theory of legislature size and welfare that takes into account two crucial components: the XXXX and the partisan affiliation of the legislators.
-
-XXXX Umberto: Parei aqui.
-
-This paper fills this gap by studying the effects of legislature size on service provision. Assuming that politicians want to further their careers, we argue that two variables determine service provision: the perceived importance of the service by voters and the politician's capacity to claim credit for its provision. Politicians perform a simple cost-benefit analysis: if providing a service results in high electoral yield, and it is easy to claim credit for, politicians will produce this service abundantly. When a service is hard to claim credit for, politicians only invest their time if it is highly preferred by voters. Finally, when services are both hard to claim credit for and of low importance to voters, they are placed at the bottom of the politicians' priorities.
-
-To test this theory, we exploit an exogenous variation in Brazilian city council sizes. In 2004, the judiciary reinterpreted the constitution, unexpectedly changing the number of city councilors in Brazilian municipalities. Before the decision, towns could freely choose their legislature size, but in March 2004, the Superior Electoral Court created population thresholds, adding one councilor for each set of 47,619 inhabitants. Around the cutoffs, this decision represents an exogenous change in city council size, allowing us to investigate the welfare effects of increasing the legislatures in Brazil.
-
-Studying the 2005 to 2008 Brazilian mayoral term, when the ruling was in effect, we find improvements in health care and education. Increasing the council size by one legislator lowers infant mortality by 1.99 per one thousand infants born and increases elementary school enrollment by 2.58 children in kindergarten classrooms. However, the additional legislator had no influence on preventive health care and education quality. [] Voters place a high electoral premium on hospital care and mediating school enrollment is relatively easy to claim credit for. In line with our theoretical model, these services should improve with legislative size. On the other hand, preventive health care is harder to claim credit for, and school quality improvements are expensive and pay off only in the long-run. Thus, these services remain unchanged with larger legislatures.
-
-Finally, we present three sets of evidence that the results are consistent with the micro-level representation practices of city councilors. First, we show that the new councilor has access to government resources and uses public office appointments to mediate service provision. They have a 91\% chance of belonging to the mayoral coalition, and they appoint an average of 105 extra bureaucrats for many positions at the mayor's office, having loyal workers inside the municipal bureaucracy. Second, we analyzed 346,553 bills approved by city councilors in municipalities close to the council size thresholds. In line with our theory, we find that councilors prefer to provide targeted goods (72.9\% of all bills), as they satisfy the populations' needs and are easier to credit claim. Finally, we ran an online survey among the councilors during the period, showing that most councilors believe that voters prefer targeted services (68.8\%) to lawmaking (24.6\%) and oversight (30\%).\footnote{Councilors were able to select multiple categories, so the sum can be over 100\%.} We also refute three alternative explanations: increased representation of women and non-white legislators, change in electoral competitiveness, and a larger average of approved legislation by each councilor.
-
-# Legislature Size, Legislative Support, and Welfare
+# Theory
 \label{sec:theory}
 
-What is the effect of larger legislatures on public service provision? The most striking feature of a legislature is the fact that decisions are undertaken collectively. Legislators have to propose changes in the status-quo, agree upon what they want to decide, evaluate proposals put forward by mayors, discuss and improve the proposals, and decide which changes they will carry on.
-
-In this sense, legislature size is critical in determining the efficiency of the decision-making process. Upon adding a new city councilor, the most simple change is the increased production capability. Legislative production, analogous to what happens in firms, may increase when adding an extra legislator \citep{crain1979cost, crain1982team, rogers2002free}. For instance, suppose that working full time, politicians can approve five bills a month. Ten politicians can together approve 50 bills, while 11 can pass 55. This increases the number of measures adopted, and if laws enact services to constituencies, then we shall witness an increase in service provision.\footnote{An alternative explanation relates to the Condorcet Jury Theorem. In these models, there is a binary choice, with one of them being ex-ante the best. If legislators access the best choice with a probability higher than 0.5, more legislators will increase the change of selecting the best choice \citep{myerson1998extended}. However, this logic assumes that politicians choose among exogenously provided proposals, which makes sense in the case of a jury, but is somewhat uncommon for legislatures. \citet{auriol2012optimal} compute the optimal size of chambers considering that this is the solution to the interplay between specialization costs and citizens' preferences.}
-
-However, increasing the size of legislatures also carries considerable costs. Larger legislatures can raise the transaction costs \citep{weingast1988industrial}, increase collective action problems \citep{crain1979cost}, and make  forming majorities more costly \citep{crain1982team}. These negative features, together with the fact that legislators may free-ride on each others' proposals, may decrease legislative productivity. For instance, if decisions need a majority or qualified majority to be approved, more legislators create a perverse incentive, increasing the difficulty of approval. Moreover, legislators are pressured to provide targeted services for their constituencies at the expense of the entire polity \citep{Weingastetal1981, PrimoSnyder2008}, and this can raise inefficiencies in expenditure allocation. Additionally, transaction costs within legislatures may increase the difficulty of passing bills \citep{weingast1988industrial, baron1989bargaining}. Therefore, it is unclear whether and how larger legislatures impact lawmaking and service provision.
-
-In our view, to understand the effects of larger legislatures, we need to consider the political motivations behind the legislator's work. While an extra politician may increase the productivity frontier of a legislature, the types of services that will be favored remain unclear. To understand the political motivations, we need a theory that accounts for the cost-benefit calculations performed by politicians.
-
-When deciding which service to prioritize, politicians look into two dimensions of the service provision. First, the competition with other legislators motivates politicians to provide services that they believe voters want, regardless of whether these policies improve long-term welfare. For instance, suppose that there are three services, organized hypothetically based on beliefs about which of these three voters are more likely to reward:\footnote{Note that there is a difference between \textit{what voters want} and what \textit{politicians believe voters want}. Although politicians and brokers mostly access voter's beliefs accurately \citep{FinanSchechter2012, Stokesetal2013}, the crucial signal that a politician gets is vote shares, which are aggregated. It is hard to disentangle which service generated the highest electoral yield for the politician. Therefore, the politician's beliefs play an essential role in the services that they prioritize.} improving a local health clinic (most preferred), building a playground (second most preferred), or increasing the quality of education (least preferable). Politicians seeking recognition will mostly want to improve the health care system, which they believe will most benefit their electoral yields. After getting this done, they will shift efforts toward the playground construction and finally to education quality. Therefore, increasing legislature size will disproportionately increase the provision of services that the politicians believe voters prefer and will reward the most in the polls.
-
-Second, to get reelected, besides providing the services that voters prefer, politicians have to take credit for facilitating provision \citep{fiorina1987personal, gulzar2017politicians, nielsen2017politicians, silva2017clarity}. Typically, the services that are easiest in terms of credit claiming are either providing local public goods, such as improving a neighborhood health clinic, or purely clientelistic and personalistic services \citep{Weingastetal1981, kuschnir2000cotidiano, Stokes2005, nichter2011electoral, Stokesetal2013, luna2014segmented, vieira2015clientelismo, bertholini2018pork}. This explains why clientelism and pork-barrel are persistent in democratic polities. Table \ref{tabcli} summarizes the incentives.
-
-\begin{table}[htp!]
-\centering
-\caption{Effects of Legislature Size on Service Provision}
-\label{tabcli}
-\scalebox{1}{%
-\begin{tabular}{@{}lcc@{}}
-\toprule
-& \textbf{Hard for Credit Claim} & \textbf{Easy for Credit Claim} \\ 
-\midrule
-\multirow{3}{*}{\textbf{Low ranked by voters}} & No changes & None or mild \\
-& or deterioration & improvements \\
-& (Preventive Health)  & (Honors bills) \\[0.5em]
-\multirow{3}{*}{\textbf{High ranked by Voters}} & Mild to low & Mild to strong \\ 
-& improvement & improvement \\
-& (Infant Mortality)  & (School Enrollment) \\
-\bottomrule
-\end{tabular}
-}
-\end{table}
-
-These two dimensions provide a simple yet powerful guide of the politicians' incentives. When voter places a high premium on the provision of a given service, and it is easy to claim credit for the provision, politicians will concentrate their efforts in providing it. The more politicians, the higher the provision of the service. Consider, for instance, constituency service, such as getting a child enrolled at a public school. The voters highly rank service such as this, and the politicians can break the school access directly, getting all the credit for the provision. Therefore, these services tend to increase, up to the point of being over provided.
-
-When a service is hard to credit claim, to be provided, it has to be highly ranked by the voters. Consider services that decrease infant mortality. Although policies in this direction might be harder to be directly associated with one given politician, every politician wants to be known as the ones that diminished infant mortality. The death of a child has devastating effects over a polity, and no politician wants to be associated with it. On the other hand, every parent would be extremely thankful for the politicians that improved health care and saved their child. Moreover, politicians might facilitate access to medication and hospitals, which in turn is easier for credit claiming. Therefore, these services will have anywhere from modest to substantial improvements.
-
-Suppose now that service is secure to credit claim for, but gives low electoral yield. In this case, although the provision can be unquestionably traced back to the legislator, voters care little about the provision. For instance, honors and appraisal legislation are very common in Brazilian municipalities. However, they are perceived by politicians as low electoral yield, but the legislator that proposed the homage usually gets associated with it. These types of legislation increase with legislature size, but their effect on welfare is negligible.
-
-Finally, services that are difficult to credit-claim, or that politicians believe that voters care very little about, are expected to receive little invested effort from politicians. For instance, consider preventive health care. Preventive care refers to health measures, such as prenatal care or vaccination, undertaken to lower the chances or the severity of a disease(s) in the future. However, it is a compounded chance: the voter has to consume the service, but its effectiveness depends on voters getting sick. Nowadays, we are witnessing how hard it is to vaccinate children, despite all the scientific evidence demonstrating its effectiveness. Moreover, rational voters may fail to punish politicians for low investments in preventive public policies, such as natural disasters or climate change mitigation \citep{gailmard2019preventing}. Hence, voters might also not punish politicians for low investments in preventive health care because they might only observe whether a politician properly invested in preventive public policies in cases of emergency. Therefore, we shall expect little to no improvement in these types of services with larger legislatures.
-
-In sum, these considerations suggest that instead of looking for overall positive or negative effects, the effects of legislature size should manifest diversely, conditional on the type of service studied. The most significant changes should be expected in services that voters want and that are easier to claim credit for. Services with only one of these characteristics will be intermediate in terms of their priority and efforts exerted by politicians in their provision and will improve with less intensity. Services hard to credit claim and low ranked by voters will tend to be unaffected or under-provided by lawmakers.
-
+Here goes the theory.
 
 # Background on the Brazilian Case
 \label{sec:background}
 
-In 2004, Brazil comprised 5,560 municipalities. According to the Brazilian Constitution, each city must provide healthcare, primary education, transportation, and infrastructure to its citizens. Municipalities have the authority to enact local laws and collect taxes on housing and services. However, their room for fiscal manipulation is limited. On average, municipal taxes account for only 5\% of the local budgets, while mandatory transfers from state and federal governments correspond to the remaining 95\%. This reduces the ability of municipal legislators to effectively influence local spending, what makes improvements in local services dependent only on the efforts of city-level politicians. XXXX
-
-With regards to their political organisation, municipalities have one mayor and one city council. Citizens choose their representatives by direct vote in the same election. Mayors are in charge of organising the provision of public services, as well as proposing laws and amendments to the tax code. Proposals submitted by the mayor are subject to the approval of the city council. Councillors, in turn, have two primary duties. First, they should discuss and vote legislation put forward by the mayors or by their peers. Second, they oversee the public budget and sanction mayors who do not comply with fiscal legislation. Councillors also provide an array of public and personal services for their constituents, such as helping voters access public hospitals, facilitating school enrolment, and even paying their voters' utility bills \citep{nichter2011electoral, AlmeidaFelix2012}.
-
-Until 2004, there was no specific regulation on the size of city councils. The 1988 Brazilian Constitution set only broad guidelines about the number of council seats in each municipality, which allowed cities to determine how many legislators they should have in their local chambers. This led to severe imbalances in the proportion of representatives per citizen across the country. For instance, the Nova Russas municipality had 30,009 inhabitants and 21 councillors, which accounts for one legislator per 1,429 citizens. In contrast, the city of Sorocaba had only 15 councillors for 528,735 inhabitants, that is, one legislator per 35,249 citizens. In 2003, this malapportionment problem gained national visibility when Mira Estrela, a small municipality with only 2,651 residents, reduced its city council from 11 to 9 seats because of fiscal considerations. The change motivated a legal dispute that reached the Brazilian Supreme Court. The Court favoured the city's decision and ruled that the size of every local council should correspond to precise population thresholds.
-
-Following the ruling of the Supreme Court, in March 2004 the Brazilian Electoral Court established a series of population cutoffs for all municipal legislatures. The Court specified that, following the Brazilian Constitution, cities with up to one million residents should have between 9 and 21 legislators. The number of seats was allocated as follows. Each city starts with 9 councillors, then adds one legislator for every 47,619 inhabitants until their councils reach 21 members. This threshold implies that cities with a population between 571,428 and one million should all the same number of legislators, that is, 21 of them. Conversely, cities between one and four million inhabitants should have at least 33 councillors, and this number increases up to 41 members following the previous formula of one additional legislator per 47,619 inhabitants. 
-
-This decision makes Brazil the ideal testing ground for our theory. Although an endogenous decision motivated the Electoral Court ruling, the population cutoffs created sharp discontinuities in the distribution of local council seats. That is, cities close to the cutoffs had very similar characteristics, but those which were just above the threshold gained a new legislator. Moreover, cities could not self-select into any group, as their population estimates were calculated using the 2003 projections by the Brazilian Census Bureau (IBGE). This change in council size also happened only seven months before the election, making it impossible for candidates to adjust their service provision strategies for the 2004 election. Therefore, the ruling allows us to study the effect of larger legislatures on public service provision during the 2005-2008 term while holding all else constant.
-
-\section{Empirical Strategy}
-\label{sec:empstrat}
-
-\subsection{Methodology}
-\label{sub:methods}
-
-We employ a regression discontinuity design (RDD) using the population thresholds established by the 2004 Superior Electoral Court resolution as treatment indicators. Figure \ref{fig:runningvarplot} displays the distribution of municipalities within each city council size. These population thresholds remained in effect until 2009, when Congress amended the Brazilian Constitution. This study covers the period between 2005 and 2008, which constitutes the full mayoral and city-council term following the 2004 Brazilian elections.
-
-\vspace{.5cm}
-
-\begin{figure}[htb!]
-  \begin{center}
-    \begin{minipage}{1 \linewidth}
-      \centerline{\includegraphics[width=6in,angle=0]{../figures/distrSeats.pdf}}
-      \caption{Distribution of Municipalities by Population and City Council Size}
-      \bigskip
-      \label{fig:runningvarplot}
-    \end{minipage}
-  \end{center}
-\end{figure}
-
-Our identification strategy relies on three assumptions. First, we assume that no municipality self-selected into each side of the discontinuity. Second, as we run a sharp RDD, we also assume that council size increases precisely as the law mandates. Third, our design assumes that the pre-treatment variables, collected before the 2003 Supreme Court decision, were not affected by the 2004 ruling on council size. In the online appendix, we test these assumptions by building an estimator that balances the local average treatment effects (LATE). Our estimate is an extension of RDD and uses covariates to balance the multiple cutoff differences. Additionally, we propose a placebo test in which we run the same models with fake cutoffs around the original thresholds. Our balance and placebo tests indicate that the assumptions underlying the analyses are indeed met.
-
-% Subsection: Variables
-\subsection{Variables and Data Sources}
-\label{sub:sources}
-
-We use four groups of city-level variables in our models. The first group includes pre-treatment control variables that were not affected by the 2004 council size resolution. We add them to the models to improve the balance between treated and non-treated units. The covariates are: 1) the number of council seats in the previous term; 2) city population; 3) city GDP; 4) the proportion of low-income families in each municipality. The data come from the Superior Electoral Court (Tribunal Superior Eleitoral--TSE) and the 2000 Brazilian census.
-
-We employ a second set of variables to quantify social welfare. They are our outcomes of interest. Our main focus here is on the impact of legislature size on education and healthcare, which are the two most important public services the municipal government should provide to citizens. We measure access to education with the average enrolment in primary (K--4) and secondary (5--8) public schools. We assess education quality with the Education Development Index (\'Indice de Desenvolvimento da Educa\c{c}\~{a}o B\'asica--IDEB), which the Ministry of Education has issued biannually since 2007. The index is a weighted average of student scores in Portuguese and Mathematics (0--10) multiplied by the harmonic mean of public school promotion rates in a given year (0--100). To test the effect of the 2004 ruling on healthcare, we mapped the coverage of the Family Health Programme, a local-level primary care policy, and the proportion of pregnant women who attended more than six pre-natal consultations. We also gather data on post-neonatal mortality\footnote{Post-neonatal mortality rate is the probability of dying between 28 days and one year of life, expressed per 1,000 live births.} to assess healthcare quality. The source of all variables is the Brazilian Ministry of Health Data Centre (DataSUS).
-
-Next, we look into municipal data, city councillors' characteristics, approved legislation, and an online survey with 174 former city councillors that served during the 2005--2008 term to test our proposed micro-level mechanisms\footnote{We also analysed 108 structured interviews conducted by \citet{lopez2017legisladores} at the Brazilian Economics Planning Institute (IPEA) in 2009. The authors asked councillors about their daily work. The interviews reinforced the idea that councillors see private goods provision as more electorally profitable than formal lawmaking or executive policy oversight.}. The municipal data contains: 1) the number of councillors belonging to the pre-electoral mayoral coalition; 2) the councillor's gender and race; 3) the number of mayor-appointed, councillor-appointed, and career civil servants. All variables come from the Superior Electoral Court and the Brazilian Institute for Geography and Statistics. 
-
-Lastly, we also collect 346,553 bills from cities whose populations lie within 10 thousand inhabitants from the 2004 population thresholds. We selected 64 out of 202 municipalities whose voting records were available online. We evaluate information regarding proposal types, discriminating between local and municipal public goods, oversight, and other legislative activity. While local public goods consist of services targeting personal, group, or neighbourhood levels, municipal public goods comprise laws and policies covering the entire municipality. Examples of the first are investing in a given public health clinic, requesting school bureaucracy to accommodate an extra child, and renovating sewage and fixing potholes on a given street\footnote{Our theory does not differentiate between clientelism and service provision, as it is hard to disentangle legislator's intentions. On the one hand, a voter may request a particular service, such as fixing a pothole. Attending this request can be interpreted as a clientelistic practice, despite their non-excludable benefits to the adjoining neighborhood. On the other hand, upon request, facilitating hospital admission is a very particularized service, thus likely to fall under clientelistic logic. Saying this is vote-buying can be imprecise, as service provision might simply be a way of signaling responsiveness to the electorate's demands and efficacy. \citet{kuschnir2000cotidiano}'s qualitative work shows the Silveira Family in Rio de Janeiro aided the community they represented regardless of political preference. As a result, when one of the family members ran in an election, he had the highest vote share ever seen in Rio de Janeiro.}. As for the latter, examples are to ameliorate education by capacitating public teachers, and to raise public health care standards through city-wide vaccination campaigns. Oversight bills are accountability and transparency mechanisms meant to keep public services undertaken by the bureaucracy in check. Other legislation comprises bills that do not fit in the previous categories. Examples are changes in street names, motions to honour citizens or groups, and legislative and internal city council procedures. 
-
-Together, this evidence provides a clear picture of representation patterns in Brazil, from municipal welfare consequences to their micro-level mechanisms. Summary statistics follow in the online supplemental materials.
+Here goes the bozo.
 
 # Results
+\label{sec:results}
 
-% Session: Results
-\section{Results}
-\label{sec:outcomes}
+Here goes the results.
 
-\subsection{The Effect of Legislature Size on Service Provision}
-\label{sub:effects}
+# Discussion
+\label{sec:discussion}
 
-We study the impact of legislatures on two services: education and health care. We collect eight indicators: four in education, and four in health care.
-
-\begin{sidewaystable}[!htbp] \centering 
-  \caption{Public Service Outcomes} 
-  \label{tab:outcomes} 
-\scalebox{0.9}{
-\begin{threeparttable}
-\begin{tabularx}{\textwidth}{@{\extracolsep{\fill}}l c c c c c c c c }
-\toprule
-& \multicolumn{4}{c}{\textbf{Education Outcomes}} & \multicolumn{4}{c}{\textbf{Health Care Outcomes}}  \\ \cline{2-5} \cline{6-9}
-  & \multicolumn{1}{c}{\small{(1)}} & 
- \multicolumn{1}{c}{\small{(2)}} & 
- \multicolumn{1}{c}{\small{(3)}} & 
- \multicolumn{1}{c}{\small{(4)}} & 
- \multicolumn{1}{c}{\small{(5)}} & 
- \multicolumn{1}{c}{\small{(6)}} & 
- \multicolumn{1}{c}{\small{(7)}} & 
- \multicolumn{1}{c}{\small{(8)}} \\
- & \multicolumn{1}{c}{\small{Average}} & 
- \multicolumn{1}{c}{\small{Average}} & 
- \multicolumn{1}{c}{\small{Elem. School}} & 
- \multicolumn{1}{c}{\small{Middle School}} &
-\multicolumn{1}{c}{\small{Infant}} & 
- \multicolumn{1}{c}{\small{Post-Natal}} & 
- \multicolumn{1}{c}{\small{Cov. Family}} & 
- \multicolumn{1}{c}{\small{Pr. Born w. 6+}} \\ 
- & \multicolumn{1}{c}{\small{Enroll. K-4}} & 
- \multicolumn{1}{c}{\small{Enroll. 5-8}} & 
- \multicolumn{1}{c}{\small{Quality Index}} & 
- \multicolumn{1}{c}{\small{Quality Index}} &
- \multicolumn{1}{c}{\small{Mortality}} & 
- \multicolumn{1}{c}{\small{Mort. Rate}} & 
- \multicolumn{1}{c}{\small{Health Program}} & 
- \multicolumn{1}{c}{\small{Pre-Natal Consult.}}\\[1ex] \cline{2-2} \cline{3-3} \cline{4-4} \cline{5-5} \cline{6-6} \cline{7-7} \cline{8-8} \cline{9-9}
- LATE & 2.58$^{***}$ & -0.01 & -0.04 & -0.11 & -1.99$^{**}$ & -0.90$^{*}$ & -1.67 & -4.23 \\ 
-    & (0.81) & (1.07) & (0.13) & (0.11) & (0.78) & (0.48) & (2.09) & (4.01) \\
-  \hdashline \\[-1.8ex] 
- N Left & \multicolumn{1}{c}{10156} & \multicolumn{1}{c}{7306} & \multicolumn{1}{c}{8597} & \multicolumn{1}{c}{5037} &
- \multicolumn{1}{c}{12299} & \multicolumn{1}{c}{5441} & \multicolumn{1}{c}{19280} & \multicolumn{1}{c}{15548} \\ 
- N Right & \multicolumn{1}{c}{686} & \multicolumn{1}{c}{581} & \multicolumn{1}{c}{670} & \multicolumn{1}{c}{529} & \multicolumn{1}{c}{1030} & \multicolumn{1}{c}{672} & \multicolumn{1}{c}{1297} & \multicolumn{1}{c}{1030} \\ 
- Eff N Left & \multicolumn{1}{c}{196} & \multicolumn{1}{c}{475} & \multicolumn{1}{c}{387} & \multicolumn{1}{c}{279} & \multicolumn{1}{c}{513} & \multicolumn{1}{c}{314} & \multicolumn{1}{c}{281} & \multicolumn{1}{c}{615} \\ 
- Eff N Right & \multicolumn{1}{c}{202} & \multicolumn{1}{c}{312} & \multicolumn{1}{c}{283} & \multicolumn{1}{c}{195} & \multicolumn{1}{c}{390} & \multicolumn{1}{c}{242} & \multicolumn{1}{c}{301} & \multicolumn{1}{c}{438} \\ 
- BW Loc Poly & 5.132 & 11.208 & 8.724 & 7.824 
- 7.720 & 7.183 & 4.185 & 8.891 \\ 
- BW Bias & 10.615 & 16.694 & 15.186 & 13.714 
- 12.289 & 10.726 & 8.310 & 15.007 \\ 
-\midrule 
- & \multicolumn{4}{c}{\textbf{Education Outcomes -- Placebo Cutoffs}} & \multicolumn{4}{c}{\textbf{Health Care Outcomes -- Placebo Cutoffs}}\\ \cline{2-5} \cline{6-9}
-  & \multicolumn{1}{c}{\small{(9)}} & 
- \multicolumn{1}{c}{\small{(10)}} & 
- \multicolumn{1}{c}{\small{(11)}} & 
- \multicolumn{1}{c}{\small{(12)}} & 
- \multicolumn{1}{c}{\small{(13)}} & 
- \multicolumn{1}{c}{\small{(14)}} & 
- \multicolumn{1}{c}{\small{(15)}} & 
- \multicolumn{1}{c}{\small{(16)}} \\
- & \multicolumn{1}{c}{\small{Average}} & 
- \multicolumn{1}{c}{\small{Average}} & 
- \multicolumn{1}{c}{\small{Elem. School}} & 
- \multicolumn{1}{c}{\small{Middle School}}&
- \multicolumn{1}{c}{\small{Infant}} & 
- \multicolumn{1}{c}{\small{Post-Natal}} & 
- \multicolumn{1}{c}{\small{Cov. Family}} & 
- \multicolumn{1}{c}{\small{Pr. Born w. 6+}}\\ 
- & \multicolumn{1}{c}{\small{Enroll. K-4}} & 
- \multicolumn{1}{c}{\small{Enroll. 5-8}} & 
- \multicolumn{1}{c}{\small{Quality Index}} & 
- \multicolumn{1}{c}{\small{Quality Index}} &
- \multicolumn{1}{c}{\small{Mortality}} & 
- \multicolumn{1}{c}{\small{Mort. Rate}} & 
- \multicolumn{1}{c}{\small{Health Program}} & 
- \multicolumn{1}{c}{\small{Pre-Natal Consult.}} \\[1ex] \cline{2-2} \cline{3-3} \cline{4-4} \cline{5-5} \cline{6-6} \cline{7-7} \cline{8-8} \cline{9-9}
-  LATE & 0.45 & 0.97 & -0.10 & -0.12
-  & -1.14 & -0.25 & 1.85 & -2.22 \\ 
-  & (0.61) & (0.98) & (0.11) & (0.09)
-  & (1.05) & (0.65) & (1.25) & (2.92) \\ 
-  \hdashline \\[-1.8ex]   
- N Left & \multicolumn{1}{c}{9040} & \multicolumn{1}{c}{6350} & \multicolumn{1}{c}{7529} & \multicolumn{1}{c}{4243} & \multicolumn{1}{c}{10614} & \multicolumn{1}{c}{4449} & \multicolumn{1}{c}{17198} & \multicolumn{1}{c}{13861} \\ 
- N Right & \multicolumn{1}{c}{1802} & \multicolumn{1}{c}{1537} & \multicolumn{1}{c}{1738} & \multicolumn{1}{c}{1323} & \multicolumn{1}{c}{2715} & \multicolumn{1}{c}{1664} & \multicolumn{1}{c}{3379} & \multicolumn{1}{c}{2717} \\ 
- Eff N Left & \multicolumn{1}{c}{1186} & \multicolumn{1}{c}{1138} & \multicolumn{1}{c}{1202} & \multicolumn{1}{c}{931} & \multicolumn{1}{c}{1213} & \multicolumn{1}{c}{775} & \multicolumn{1}{c}{2575} & \multicolumn{1}{c}{1575} \\ 
- Eff N Right & \multicolumn{1}{c}{724} & \multicolumn{1}{c}{672} & \multicolumn{1}{c}{734} & \multicolumn{1}{c}{580} & \multicolumn{1}{c}{890} & \multicolumn{1}{c}{557} & \multicolumn{1}{c}{1483} & \multicolumn{1}{c}{1004} \\ 
- BW Loc Poly & 6.325 & 6.975 & 6.686 & 7.198 
- & 4.840 & 5.360 & 6.999 & 5.796 \\ 
- BW Bias & 9.860 & 12.598 & 10.029 & 11.004 
- & 7.268 & 7.943 & 11.213 & 9.559 \\ 
-\bottomrule
-\end{tabularx}
-\begin{tablenotes}
-\small
-\item \textbf{Note:} $^{***}$p $<$ .01; $^{**}$p $<$ .05; $^{*}$p $<$ .1. RD local linear estimates using \citet{CCT2014} optimal bandwidth quadratic selection and triangular kernel. Robust standard errors, clustered at the municipal level, are in parentheses. The control variables are: population, GDP per capita, number of seats in 2000, year, and a dummy for the northeast region. \textit{N Left} and \textit{N Right} represent the total number of observations on the left and right sides of the thresholds (untreated). \textit{Eff N Left} and \textit{Eff N Right} are the number of cases within the bandwidth. \textit{BW Loc Poly} is the Bandwidth used to compute the Local Average Treatment Effect (LATE). \textit{BW Bias} is the bandwidth used to compute the standard errors.
-\end{tablenotes}
-\end{threeparttable}}
-\end{sidewaystable}
-
-XXXX Rewrite all this!
-
-Each of the outcomes is further divided into two groups. In the first group, we include services that are easier to provide or credit claim, or both. These services are preferred by the electorate and have an intensive advertising effect for the councillor. In this category, we have school enrollment and infant mortality. In the second group are services either considered less critical by voters or harder to credit claim. They are harder to translate into votes or to target and advertise. In our models, we use preventive health care and quality of education to illustrate. According to our theory, we expect that increasing legislature size has a positive effect on desirable services that are easy to target.
-
-Table \ref{tab:outcomes} presents the results for education and health care outcomes. The data shows that, with the addition of a city councillor, enrollment in elementary schools increased by 2.58 children on average per school. This represents a change of around 0.20 standard deviations. From 5th to 8th grades, council size has no effect on school enrollment. Due to high dropout rates at this stage, spots for extra students remain vacant. Results are insignificant for quality indicators.\footnote{As education quality improves in the medium to long term, we look into the 2015 education quality index in the Online Supplemental Materials. Effects are null, pointing to no delayed benefits.} As expected, the placebo regressions are also insignificant.
-
-Although Brazil achieved universal elementary school enrolment, enrolling a child in public school is particularly difficult in the early years. At the same time, taking care of small children is a considerable burden for poor households. Citizens thus reach out to councillors who can pressure school's bureaucracy to accommodate an extra child. Such an effort has virtually no cost to the politician, and grants her direct recognition, benefiting her electorally. 
-
-Consequences for infant mortality rates are also substantial. 1.99 deaths per 1,000 children born are prevented with every extra legislator. This impact is significant in absolute terms and represents an effect of 0.14 in standard deviations. Moreover, post-neonatal mortality decreases by 0.90 casualties per 1,000 births, which improves health care by 0.14 standard deviations. As expected, placebo regressions were statistically insignificant. However, the Family Health Program coverage and the proportion of children born with more than six prenatal consultations seems to decrease. This apparent inconsistency with the other indicators will be discussed further in the text.
-
-% Sub-Section: Mechanisms
-\subsection{Applying the Mechanism and Testing Hypotheses}
-\label{sub:mechanism}
-
-We test our hypotheses in Table \ref{tab:mechanism-reg} dividing the municipal outcome data in two panels. In Panel A, we counter alternative explanations for our mechanism. In Panel B, we present evidence that corroborates our arguments.  
-\begin{table}[!htbp] \centering 
-  \caption{Mechanism Regressions -- Aggregated Municipal Level Outcomes} 
-  \label{tab:mechanism-reg} 
-\scalebox{0.9}{
-\begin{threeparttable}
-\begin{tabularx}{\textwidth}{@{\extracolsep{\fill}}l c c c c }
-\toprule
-& \multicolumn{4}{c}{\textbf{Panel A: Representation, Competition, and Legislation Approval}} \\ \cline{2-5}
- & \multicolumn{1}{c}{\small{(1)}} 
- & \multicolumn{1}{c}{\small{(2)}} 
- & \multicolumn{1}{c}{\small{(3)}} 
- & \multicolumn{1}{c}{\small{(4)}} \\
- & \multicolumn{1}{c}{\small{Num. Female}} & 
- \multicolumn{1}{c}{\small{Num. Non-white}} &
-  \multicolumn{1}{c}{\small{Candidates}} & 
-  \multicolumn{1}{c}{\small{Prop. Laws}} \\ 
-   & \multicolumn{1}{c}{\small{councillors}} & 
- \multicolumn{1}{c}{\small{councillors}} &
-  \multicolumn{1}{c}{\small{Per Seat}} & 
-  \multicolumn{1}{c}{\small{Approved Council}} \\[1ex] \cline{2-2} \cline{3-3} \cline{4-4} \cline{5-5}
- LATE & 0.22 & 0.60 & -0.19 & -0.02 \\ 
-  & (0.38) & (0.85) & (1.11) & (0.08) \\ 
-  \hdashline \\[-1.8ex] 
- N Left & \multicolumn{1}{c}{5183} & \multicolumn{1}{c}{239} & \multicolumn{1}{c}{5184} & \multicolumn{1}{c}{3424} \\ 
-N Right & \multicolumn{1}{c}{343} & \multicolumn{1}{c}{158} & \multicolumn{1}{c}{343} & \multicolumn{1}{c}{270} \\ 
-Eff N Left & \multicolumn{1}{c}{194} & \multicolumn{1}{c}{47} & \multicolumn{1}{c}{179} & \multicolumn{1}{c}{227} \\ 
-Eff N Right & \multicolumn{1}{c}{144} & \multicolumn{1}{c}{47} & \multicolumn{1}{c}{132} & \multicolumn{1}{c}{142} \\ 
-BW Loc Poly & 8.564 & 2.954 & 8.126 & 11.080 \\ 
-BW Bias & 13.569 & 4.917 & 12.049 & 16.921 \\[1.0ex] 
-\midrule 
-& \multicolumn{4}{c}{\textbf{Panel B: Access to Resources and Patronage}} \\ \cline{2-5}
- & \multicolumn{1}{c}{\small{(5)}} 
- & \multicolumn{1}{c}{\small{(6)}} 
- & \multicolumn{1}{c}{\small{(7)}} 
- & \multicolumn{1}{c}{\small{(8)}} \\
- & \multicolumn{1}{c}{\small{Mayoral}} & 
- \multicolumn{1}{c}{\small{Num. Politically}} & 
- \multicolumn{1}{c}{\small{Num. Career}} & 
- \multicolumn{1}{c}{\small{Num. councillor}} \\
- & \multicolumn{1}{c}{\small{Coalition Size}} & 
- \multicolumn{1}{c}{\small{Appointed Empl.}} & 
- \multicolumn{1}{c}{\small{Bureaucrats}} & 
- \multicolumn{1}{c}{\small{Assistants}} \\[1ex]  \cline{2-2} \cline{3-3} \cline{4-4} \cline{5-5}
- LATE & 0.91$^{*}$ & 105.09$^{*}$ & 71.57 & 2.09 \\ 
-  & (0.50) & (62.12) & (218.12) & (4.37) \\ 
-    \hdashline \\[-1.8ex] 
- N Left & \multicolumn{1}{c}{5168} & \multicolumn{1}{c}{15536} & \multicolumn{1}{c}{15531} & \multicolumn{1}{c}{5179} \\ 
-N Right & \multicolumn{1}{c}{343} & \multicolumn{1}{c}{1028} & \multicolumn{1}{c}{1027} & \multicolumn{1}{c}{344} \\ 
-Eff N Left & \multicolumn{1}{c}{240} & \multicolumn{1}{c}{351} & \multicolumn{1}{c}{513} & \multicolumn{1}{c}{99} \\ 
-Eff N Right & \multicolumn{1}{c}{161} & \multicolumn{1}{c}{334} & \multicolumn{1}{c}{388} & \multicolumn{1}{c}{101} \\ 
-BW Loc Poly & 9.906 & 6.019 & 7.695 & 5.134 \\ 
-BW Bias & 15.846 & 10.170 & 11.780 & 8.902 \\ 
-\bottomrule
-\end{tabularx}
-\begin{tablenotes}
-\small
-\item \textbf{Note:} $^{***}$p $<$ .01; $^{**}$p $<$ .05; $^{*}$p $<$ .1. RD local linear estimates using \citet{CCT2014} optimal bandwidth quadratic selection and triangular kernel. Robust standard errors, clustered at the municipal level, in parentheses. Controls: population; GDP per capita; number of seats in 2000; year; and dummy for northeast region. \textit{N Left} and \textit{N Right} represent the total number of observations on the left and right sides of the thresholds (untreated). \textit{Eff N Left} and \textit{Eff N Right} are the number of cases within the bandwidth. \textit{BW Loc Poly} is the Bandwidth used to compute the Local Average Treatment Effect (LATE). \textit{BW Bias} is the Bandwidth used to compute the standard errors.
-\end{tablenotes}
-\end{threeparttable}}
-\end{table} 
-
-Panel A (Table \ref{mechreg1}) tests perspectives proposed by the literature. One of them is that better representation of under-served groups could broaden health care and education provision \citep{pande2003can, chattopadhyay2004women, chin2011redistributive, duflo2012women}. However, columns (1) and (2) show that neither gender nor representation of non-white legislators significantly improves public service provision for minorities. Alternatively, enhanced competition is also thought to improve responsiveness, alleviating the principal-agent problem between voters and politicians. Yet, we show that competition (3) or bills approval (4) remain unchanged when we increase council size. 
-
-Panel B (Table \ref{mechreg1}) illustrates our mechanism. Column (5) shows that there is a 91\% chance of the extra legislator belonging to the mayoral coalition. This suggests that these additions will likely enhance welfare effects due to increased governability\footnote{It is possible that the new coalition councillor facilitates mayor's lawmaking process. Indeed, we might actually be estimating the effects of mayors on policy-making. Their relationship with the central government is fundamental for service provision \citep{bueno2018bypassing}. In the Online Supplemental Materials, we investigate whether mayoral and council party composition vary across cities, and find that it remains unchanged around the thresholds.}. Column (6) demonstrates that adding one councillor increases the number of appointed employees by 105 with a standard deviation of over 0.30. This attests councillors' strong ties with the administration and facilitates service provision.
-
-Additionally, we consider the number of career employees\footnote{Career bureaucrats have to undergo rigorous selection that prevents them from being fired for political reasons.} and find that improvements in state capacity and welfare are not consequences of bureaucratic agency. Column (7) points that the number of career bureaucrats does not significantly explain access to resources. Finally, adding a legislator has a null effect on the average number of appointed cabinet employees (column (8)). 
-
-\subsection{Disaggregating Data on Approved Legislation and City councillor Survey}
-\label{sub:survey}
-
-To evidence our mechanism's operation in city councillors' ordinary legislative activities, we examine two datasets: one composed by the approved bills, and the other by answers to the online survey. Figure \ref{LEGAPPR} showcases the results of the analysis of approved legislation.
-
-\begin{figure}[htb!]
-  \begin{center}
-  \caption{Legislation Approved in Municipalities Closer to the City Council Thresholds}
-    \begin{minipage}{1 \linewidth}
-      \centerline{\includegraphics[width=6in,angle=0]{../figures/lawsApproved.pdf}}
-      \bigskip
-      \label{LEGAPPR}
-    \end{minipage}
-  \end{center}
-\end{figure}
-
-As previously argued, lawmakers decide on service provision based on the feasibility of credit-claiming. The top-two preferred legislation categories share this feature. In addition,\textit{local public goods} carries high electoral yield, which explains it ranking above \textit{others}. Graph 2A (Figure \ref{LEGAPPR}) presents the frequency of approved proposals. The overwhelming majority belongs to \textit{local public goods} (72.9\%), followed by \textit{others} (17.4\%).\footnote{Note that the sum is below 100\%. This is due to the SVM algorithm classifying around 3.5\% of laws as belonging to none of the categories above. For more information, see \citet{collingwood2013rtexttools}.} Graph 2B (Figure \ref{LEGAPPR}) depicts the average number of bills per legislator and, evidently, reflects the same pattern: \textit{local public goods} also amount to the highest, at 290.7 (S.E. 56.95), and \textit{others} follows with 77.6 (S.E. 15.50). Measuring the production of each representative builds on the idea that adding legislators – who provide more services – generates greater welfare.
-
-Health care and education services, which compose 11.1\% of total approved bills (44.3 per legislator), are mainly addressed through \textit{local public goods}. According to Graph 2C (Figure \ref{LEGAPPR}), they represent 80.6\% of proposals in these sectors, followed by \textit{municipal public goods} (7.8\%). Productivity follows the same pattern (Graph 2D, Figure \ref{LEGAPPR}). Legislators propose 36.4 (in absolute terms) of the first, and 4.2 of the latter. Therefore, not only in general, but also specifically for education and health care, \textit{local public goods} are the preferred choice of councillors in Brazilian municipal chambers.
-
-In our online survey with former city councillors, we asked about their legislative activity, the amount of votes it yielded, and how they negotiated with the mayor. While most results are in the Online Supplemental Materials, Figure \ref{survelec} displays the services councillors believe to generate the highest electoral results.
-
-\begin{figure}[htb!]
-  \begin{center}
-  \caption{Electoral Attractiveness of Councilor's Activities and Practices}
-    \begin{minipage}{1 \linewidth}
-      \centerline{\includegraphics[width=6in,angle=0]{../figures/elecYieldJobsCouncilors.pdf}}
-      \bigskip
-      \label{survelec}
-    \end{minipage}
-  \end{center}
-\end{figure}
-
-The service that best secures votes, according to 84.3\% of the interviewed, is access to hospital facilities; to 56.0\%, it is school admission; and to 71.0\%, it is access to medication. 82.6\% of respondents confirm that local public goods are electorally beneficial, and 50.2\% indicated that, namely, fixing potholes on public roads resulting in some or many votes. Second in their evaluation is public school quality oversight (34.7\%), followed by  reported public construction oversight (25.3\%). These last two services, despite being preferred by voters and easy to credit-claim, require more investment. Coordination costs related to mayor negotiation and bureaucratic mediation also force them to recur to less demanding options, for instance, honors legislation. This is likely the reason why more approved bills fall under the \textit{others} label than under \textit{oversight}.
-
-\section{Discussion}
-
-%CLIENTELISM
-
-Although city councillors should have governing advantages for being the closest representatives to citizens, the literature often presents them as inefficient and clientelistic \citep{Castroetal2009, AlmeidaFelix2012, leal2012coronelismo}. This proximity to the community results in better informed decision-making and accountability. However, it also creates perverse incentives to corruption, patronage and overprovision of electorally beneficial services. Poor management could be driven by private interests, or by limitations restraining governability. It is unrealistic to think that all politicians have free rein to approve and implement policies at their will. Bureaucracy and strong executives balance the assembly, who, in turn, develops strategies to enforce its will. 
-
-A councillor can only provide services which she can control or influence. In a Brazilian municipality, mayors directly control budget and staff allocation. Consequently, councillors must side with the mayor to participate in policy-making. Efforts towards establishing alliances start in the pre-electoral coalition period. If a candidate is part of the mayoral coalition, she credibly signals being able to deliver her platform promises. As the Electoral Justice allocates seats according to vote shares (D'Hondt method), pre-electoral coalitions have advantages since extremely popular candidates' votes thrust smaller candidates into office. Pre-electoral coalitions become crucial for mayors' governability after the election.
-
-Bureaucrats also mediate most of the access to resources, and may filter councillor's demands, either for or against them. To influence service provision, city councillors sometimes recur to patronage, which is a strategy mobilized to ensure collaborative administrations. It is characterized by the employment of bureaucrats attached to an incumbent's personal figure. These politically-appointed employees have incentives to support the councillor's interests unconditionally \citep{Robinson2013}. Loyalty of the administration – through patronage or not – thus appears as fundamental in the political game. 
-
-Another limitation to representative agency is based on perception, as politicians imperfectly observe voters' preferences. The online survey provides us with clues on how councillor's beliefs could translate into their policy choices. \textit{Local public goods} is the preferred type of legislation across sources. We assembled five specific welfare-improving policies into the \textit{local public goods} category (Figure \ref{survelec}), namely \textit{hospital admission aid} (84.3\% answered it gives some to many votes), \textit{other local public goods} (82.6\%), \textit{access to medication} (71.0\%), \textit{school admission aid} (56.0\%), and \textit{street repairs} (50.2\%). They all pushed down remaining categories. \textit{School quality oversight} places second at overwhelming distance (34.7\%). In the approved legislation dataset (Graph 2A, Figure \ref{LEGAPPR}), \textit{local public goods} is equally favoured (72.9\%), followed by \textit{others} legislation (17.4\%), which we know to represent mostly honors bills.
-
-If councillors aim for reelection, why do approved legislation frequencies not reflect answers to the survey? Comparison points to an inconsistency that circles back to the aforementioned limitations. Since negative exposure of executive and bureaucratic underachievement tensions political coalitions, and is less attractive to voters than policy-making. Logically, councillors will dedicate more to \textit{local public goods} than to \textit{oversight}. This does not attest their lack of competence, efficiency or honesty, but rather evidences the hardship of coordinating efforts and collectively making decisions under diverging goals and interests.
-
-
-# Conclusion
-\label{sec:conclusion}
-
-In this paper, we argue that political motivation determines the services that gain traction with larger legislatures. Councillors, guided by reelection, invest in policies they believe voters want and for which credit-claiming is feasible. Consequently, many essential welfare services are underprovided, giving place to locally-targeted policies. For instance, our theory explains why patterns of poor education persist in developing countries. In 2000, among the 32 countries that participated in the OECD's \textit{Programme for International Student Assessment} (PISA), Brazil ranked last. Between 2006 and 2015, there were virtually no improvements in scores. Counterintuitively, school enrolment was close to 99\% since 2010. Although desired by voters, ameliorating education quality is difficult to trace back to specific politicians. In this logic, they have incentives to target education through tangible yet low-reaching measures, such as raising the amount of children attending schools.
-
-We run a RDD to capture the effect of adding representatives to a municipal council. We focus on the effects of exogenously imposing thresholds to chamber sizes. We compare cities with similar populations, but located on different sides of the cutoff. We also collect data on the approved legislation during the 2005-2008 term, and perform an online survey with former representatives. Empirically, larger municipal chambers prevents death in infancy and stimulate educational enrollment. These changes do not, however, coincide with improvements in education and health care quality. We find that councillors prefer investing in local public goods, and they access resources via attachment to mayors and through bureaucratic mediation.
- 
-Our study has implications for policy-making and for the literature on distributive politics. First, we provide tools to predict welfare effects of changing the number of seats in municipal councils. We also contribute to comprehend the strategies politicians may use to adapt to these modifications. For example, an extra legislator will hardly add diversity to council activities, since there is a 91\% probability she will integrate the mayoral coalition. As for academia, we offer a simple theory to understand the underprovision of essential public goods as education and health care. We add complexity to the common belief that politicians in developing countries are purely clientelistic, inefficient or dishonest. We conclude that the political architecture of the assembly floor creates perverse incentives.
+Here goes the discussion.
 
 \newpage
 \setlength{\parindent}{0cm}

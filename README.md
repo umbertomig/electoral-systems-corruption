@@ -1,10 +1,10 @@
-# Legislature Size and Welfare: Evidence from Brazil
+# Electoral Systems, Competition, and Incentives for Corruption
 
 This GitHub repository contains data and documented R code for ["Electoral Systems, Competition, and Incentives for Corruption"](xxxx), authored by [Umberto Mignozzetti](http://umbertomig.com). 
 
 > **Abstract**: XXXX.
 >
-> **Keywords**: Political Corruption; District Magnitude; Incentives; Welfare; Brazil
+> **Keywords**: Political Corruption; District Magnitude; Single-member districts; Multi-member districts; Welfare; Brazil
 
 You can cite the article as: 
 
