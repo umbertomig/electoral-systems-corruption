@@ -47,27 +47,397 @@ knitr::opts_chunk$set(echo = TRUE)
 # Introduction
 \label{sec:intro}
 
-Here goes the intro.
+The design of electoral institutions is key for political accountability and representation \citep{cox1997making, manin1999elections, carey2011electoral, shugart2017votes, taylor2017impact}. Electoral rules influence incentives that politicians face when they are in office, public service provision, reelection and survival in office, campaign strategies, and incumbency advantages, among other characteristics. One particular consequence of electoral rules is their effect on corruption \citep{Persson2003, Kunicova2005, chang2007electoral, charron2011party, alfano2014electoral, schleiter2014party, xezonakis2015can, schwindt2016corruption}.
 
-# Theory
-\label{sec:theory}
+Despite the large body of literature on incentives that electoral system creates for corruption, two problems remain sparse. On the one hand, the roles of challengers in coping or boosting corruption incentives remain unclear. Although challengers are not the politicians that embezzle money, their campaign strategies may not only communicate with voters about her platform but also hold the incumbent's accountable by exposing their malfeasances once in office.\footnote{According to  \citet{polborn2006informative}, negative campaign is useful as it reveals information about candidates that they would now be willing to reveal by themselves. This paper rationalizes the idea that negative campaign, such as exposing a corrupt past, maybe even desirable from the perspective of voter's welfare.}
 
-Here goes the theory.
+On the other hand, despite the richness of the empirical literature on electoral systems and corruption, it frequently finds mixed results regarding the impact of district size, the pool of competitors, parties, and other electoral characteristics on corruption. For instance, \citet{Persson2003} show that closed-list Proportional Representation (PR) increases corruption by making voters less capable of punishing politicians, and single-member districts (SMD) may not be best for corruption as it poses significant entry barriers to honest politicians. However, \citet{chang2007electoral} demonstrate that, when controlling for the district magnitude, open-list PR performs worse in large-magnitude districts compared with closed-list PR (and vice-versa for small magnitude districts), showing that the results are highly non-monotone. Also, while \citet{charron2011party} shows that more competition increases corruption, specially in single-member district countries, \citet{schleiter2014party} and \citet{schleiter2016party} argue that party competition and party institutionalization increase the availability of credible alternatives against corrupt politicians, decreasing corruption. Moreover, \citet{tavits2007clarity, potter2011curbing} and \citet{schwindt2016corruption} show that clarity of responsibility is essential for corruption outcomes, as it limits the capacity for politicians to hide behind the political system, making them more accountable for bad outcomes.\footnote{For a summary of the clarity of responsibility and elections see \citet{silva2017clarity}.} Therefore, findings on the corruption-electoral systems literature are mostly contradictory, and this claims for a stronger theoretical foundation that conciliates differences in empirical models and their institutional and behavioral incentives.
 
-# Background on the Brazilian Case
-\label{sec:background}
+This paper provides a rigorous micro-foundation for one facet of the corruption-electoral system nexus. I build a model on corruption incentives considering the two main set of players in this strategic interaction: incumbents and challengers. Incumbents choose policy investments, with the possibility to add kickbacks to the optimal required values. Challengers observe the total investment and choose a proportion of their campaign to devote for exposing the incumbents' corruption. Solving the model presents the determinants for the corruption levels: the \textit{free-riding} incentives caused by the number of competitors, and the \textit{coordination failures} caused by the number of incumbents.
 
-Here goes the bozo.
+Polities with an open entry may attract many challengers, and even though challengers benefit from the use of negative campaign, they prefer to let the other challengers expose the corrupt politician: free-riders avoid the costs of exposing the corrupt politicians while benefiting from the increased winning chances. Additionally, polities with many incumbents, such as proportional representation systems, add coordination failures to the top of the free-riding incentives: when there are many challengers and incumbents, challengers may happen to expose the same politician, leaving other incumbents without proper denouncing.\footnote{Although a system that has many incumbents is not a perfect representation of PR systems, a perfect PR representation would make the model considerably harder to understand, without changing the qualitative characteristic of its results. Moreover, our approach is similar to \citet{Myerson1993}, with the key difference that we do not assume the existence of a behaviorally non-corrupt politician. In this sense, this is a moral hazard model, while Myerson's is an adverse selection model.} This possibility makes incumbents more prone to pocket even more money than when there is only free-riding caused by a large pool of challengers. In sum, these collective action problems determine the incentives that challengers have to expose incumbents, therefore impacting the incentives for corruption.
 
-# Results
+The results here suggest that the least corrupt system is the single-member district with restrictions for contest office and the most corrupt system is proportional representation with weak parties and personalistic voting (open-lists). However, as changes in electoral systems reflect more profound trade-offs, sometimes polities may decide that multi-member districts trumps single-member districts, as their primary objective is to accommodate social cleavages or improve the representation of minorities.\footnote{See \citet{carey2011electoral} for a discussion about the possibility of an optimal trade-off between representation and accountability, where PR in small districts seem to be the best for maximizing representation without lowering accountability considerably.} The historical development of each polity determines these trade-offs and the relative importance of representation, accountability, corruption, and other related components. My argument in this paper is that if corruption is a problem that the polity wants to fight, and if politicians want to limit corruption by reforming the electoral system, then they should raise entry barriers and decrease district size. Additionally, I discuss many extensions that shed light on the micro-level electoral institutions affecting the collective action problems. Rules such as run-offs, proportional representation thresholds, or even laws that bar convicted politicians to contest offices are sometimes proposed as a method to lower corruption. Again, institutions that lower competition and district size decrease political corruption.
+
+The last session of the paper shows that our claims hold empirically, by exploiting two quasi-experimental shocks in district size and competition in Brazil. First, I show that run-off and candidacy impact on corruption. Second, I show that exogenous thresholds for legislature size influences candidacy and district size, impact on corruption. This paper builds upon \citet{ferraz2011electoral}, \citet{avis2016government}, and \citet{britto2016corruption} findings, providing a theoretical explanation for their results. These results provide a solid empirical test for my model, showing that the electoral rules and competitiveness consistently affect corruption levels, in one of the most corrupt democracies in the world.
+
+# Corruption, politics, and institutions
+\label{sec:theorytext}
+
+In modern societies, elections select representatives, that carry out the interests of voters \citep{pitkin1967concept, manin1997principles}. Representation creates a principal-agent problem as the elected have the latitude to implement or not the voters' preferences \citep{manin1999elections}. As there exist many methods and rules to elect politicians, these rules affect the extent through which politicians perceive themselves as accountable to voters in several forms \citep{LizzeriPersico2001, grofman2016perspectives}.
+
+For instance, consider the differences in representation generated by multi-member and single-member districts. In single-member districts, only one representative gets elected, and she represents the district majority. In homogeneous districts, single-member districts with majoritarian rule capture the social and racial composition precisely. However, when there is considerable heterogeneity, such as social, racial, or religious cleavages, single-member districts may under-represent those cleavages. In these cases, multi-member districts are preferable concerning representation, as they tend to reflect the actual proportions of these cleavages more closely.
+
+However, electoral institutions embed more profound trade-offs in every dimension they affect \citep{grofman1986electoral, carey2011electoral, grofman2016perspectives}. Multi-member districts favor representation but also translate into a more significant number of parties, increasing the governing costs \citep{duverger1959political, fujiwara2011regression}. Single-member districts, on the other hand, tend to produce fewer represented parties, lowering the governing costs.
+
+One dimension affected by the electoral rules is the electoral campaigns. Every politician divides their campaign roughly in two basic strategies: positive campaign, where they present their political platform for voters; and negative campaign, where they campaign against their opponents, aiming to affect the voter's perceptions regarding other candidates \citep{harrington1996spatial, polborn2006informative, walter2014stakes}. Although voters and politicians may perceive positive campaign as less controversial, negative campaigns are also essential, primarily when they aim to expose a corrupt politician \citep{polborn2006informative, FerrazFinan2008, avis2016government}. In this sense, to understand how electoral systems affect corruption, we need to explore the effects of electoral rules on incentives for challengers to expose corrupt incumbents.
+
+Exposing corrupt politicians consumes campaign resources, and the aim is to change the voters' perspectives about another politician. However, the electoral rules affect the number of politicians, either incumbent or challengers, running in the election. In this sense, like any other situation where there are many politicians, collective action problems affect the willingness to campaign against a corrupt incumbent \citep{olson2009logic, ostrom2015governing}. These collective action problems will determine the incentives that challengers face when they are willing to expose corrupt incumbent(s).
+
+For the scope of this paper, two types of collective action problems matter when studying electoral rules: free-riding and coordination failures. First, electoral rules influence the incentives that candidates have to free ride on others candidates' negative campaigns. The free-riding here entails a situation where a candidate does not pay the costs of negative campaigning but benefit from the negative campaigning undertaken by the other candidates.
+
+Second, electoral institutions may cause coordination failures, as candidates would be better-off exposing only one incumbent at a time, but as they cannot perfectly coordinate, they end up targeting the same incumbent more than one time. If we consider that the likelihood of exposure has decreasing returns, meaning that the more negative campaigning politicians make, the lower the effects of additional negative campaigning, inefficient targeting lowers the effectiveness of corruption exposures. A summary of these two effects on different electoral rules follows in Table \ref{tabcor2x2}.
+
+\begin{table}[htp!]
+\centering
+\caption{Effects of Competition and District Size on Corruption}
+\label{tabcor2x2}
+\scalebox{1}{%
+\begin{tabular}{@{}lcc@{}}
+\toprule
+& \textbf{Single-Member} & \textbf{Multi-Member} \\ 
+& \textbf{Districts} & \textbf{Districts} \\ 
+\midrule
+\textbf{One Challenger} & Low Incentives & Moderate Incentives \\
+\textbf{Per Seat} & for Corruption & for Corruption \\
+ & (No Free-Riding or Coord. Probl.) & (Coordination Problems) \\[0.5em]
+\textbf{Multiple Challengers} & Moderate Incentives & High Incentives \\ 
+\textbf{Per Seat} & for Corruption & for Corruption \\
+ & (Free-Riding Problems) & (Free-Riding + Coord. Probl.) \\
+\bottomrule
+\end{tabular}
+}
+\end{table}
+
+Regarding corruption incentives, single-member districts with one challenger running are the least corrupt systems. The reason here is that any negative campaign that harms the incumbent also increases the challenger's electoral perspective. In this sense, no free-riding or coordination failures happen, and the incentives to expose corrupt politicians are at the maximum. This explains why majoritarian systems with run-off are effective in lowering corruption: the run-off makes the election to polarize, eliminating the free-riding and coordination failures \citep{ferraz2011electoral}.
+
+Adding more challengers create a free-riding problem, as challengers may benefit when other fellow challengers investigate the incumbent. This result points to the direction that more competition increases corruption, agreeing with the majority of the empirical findings \citep{Charron2011}.\footnote{A few papers, such as \citet{Persson2003}, argue that competition is positive, as it presents lower entry barriers, and therefore, credible alternatives against corrupt politicians. Despite their findings, most of the literature shows a negative influence of competition. However, at the party level, competition seems to provide positive results \citep{schleiter2014party}.}
+
+Adding more seats and more challengers further reduce the incentives to expose corrupt politicians, and the reason is twofold. First, adding more seats create free-riding incentives, as it increases the absolute number of competitors, even when the ratio of competitors-per-seat is kept constant. Second, adding more seats increase the likelihood of coordination failure, as the same incumbent may be exposed more than once while others may be not exposed at all. These two effects lower the incentives for exposing corrupt politicians, and they reasonably explain why countries with open-list proportional representation systems are endemic corrupt \citep{Myerson1993, ames1995electoral, mello2018brazil}.
+
+However, the cases reported above may be considered \textit{pure forms}, that vary with the particular characteristics of each system. Consider, for instance, three variants of these simple electoral rules. First, consider that party lists may be open or closed, and this affects the strength of a party. Closed lists empower party leaders, and may have a positive effect on coordination, lowering corruption. \citet{chang2007electoral} find that there exists a threshold where closed-list proportional representation systems become less corrupt than open-list proportional representation systems. \citet{schleiter2016party}, along with similar lines, argue that stronger parties are better to decrease political corruption.
+
+This list can be extended, as there are many types of political rules. Ultimately, they will be closer to one of the forms in Table \ref{tabcor2x2}. The main conclusion is that larger the number of incumbents or number of challengers, the more the collective action problem in the exposure of corrupt politicians.\footnote{Moreover, the mechanism in play may not be the same as the exposed here, and the diminished incidence of corruption could be caused not because challengers investigate more, but because of some other feature. Here in this paper, I abstract from these other possibilities in order to explore the role of challengers in the diverse electoral systems.}
+
+# Formal Model
+\label{sec:theorymodel}
+
+Let a strategic interaction between three players: an incumbent politician ($I$), a challenger politician ($C$), and a representative voter ($V$).
+
+The incumbent $I$ has a fixed budget of $A$ units, to invest in service provision. The level of expenditure required to provide the public goods is a random variable $\eta \in [0, A]$, where $f(\eta)$ an increasing probability density function. The randomness reflects the idea that changes in real-world conditions influence the amount needed for service provision. The incumbent knows the optimal investment level, making it her private information. If incumbents were honest, they would invest the needed amount to provide the services ($\eta$), but in this model, the incumbent invests the optimal amount plus some value, that she intends to pocket. The utility from pocketing money is described by $u(e_i-\eta)$, which $u$ is a strictly concave utility function, and $e_i$ represents the service expenditure by an incumbent $i$.\footnote{This assumption matches a frequent empirical regularity in the political environment, especially in new democracies: corruption tend to be over-investments, meaning that politicians add kickbacks and gifts to procurement contracts, receiving benefits them. Usually, what happens is not that voters fail to receive the services, it is that those services cost much more than their market value. For instance, \citet{Bandiera2009} estimated that the waste in procurement account for around 2\% of the Italian GDP.}
+
+After the service provision period, the electoral stage starts with the incumbent and the challenger campaigning. The challenger and the voters do not observe the optimal service investment level, but the challenger observes the amount of money invested by the incumbent politician ($e_i$, for all $i$). The challenger faces no entry costs and has the opportunity to use the negative campaign to convince the voters that the incumbent has embezzled public funds.\footnote{ This assumption is strong, as many papers demonstrated the effect of quality and service provision on the decision to challenge an incumbent \citep{Gordonetal2007, ashworth2008electoral, gordon2009voter, hall2015much}. In this paper, I endogenously fix the number of incumbents and challengers, as the critical point here is to study how the number of politicians influences incentives. In the Appendix, I extend the model to have a pool of possible challengers that have their entry costs a random variable. In the extension, the total pool of likely entrants becomes the critical variable, holding all qualitative findings here unchanged. Therefore, to fix the number of entrants is easier to understand, and represents a class of models that preserve the characteristics of our results, than we adopt this approach in the main text. Also, for the entry decision in economics, see \citet{Milgrom1982, Nti1989}.} If she decides to use all of her campaign resources to expose the corrupt politician, she pays a cost $c>0$. Her chances of success depend on the strength of the corruption evidence, plus other environmental facts, such as how much control over information incumbents have \citet{ferraz2011electoral, boas2011controlling}, credibility perceived by the voter \citep{polborn2006informative, AshworthShotts2011}, access to privileged information, and the challengers' competence to spread the information among voters. I assume that these factors are captured by a corruption detection technology, a function $\lambda(.)$ that is increasing on the amount embezzled by the incumbents. It increases with the amount embezzled, as the more money the incumbent pockets, the easier to convince voters that there is hard evidence of malfeasance undertaken by the incumbents.\footnote{There are two ways to interpret the hard evidence detection technology. First, it can be exposure of hard corruption evidence that was brought by a law enforcement agency, such as the FBI in the US or the General Comptroller Agency in Brazil. Second, it can be information uncovered during the campaign process by candidates or former allies that turned to the opposition. Either way, we consider that the process is noisy, but more substantial sums of money embezzled makes its detection easier.}
+
+Finally, as the voters' decisions are sequentially rational, upon observing hard corruption evidence, they punish the incumbent electing the challenger. Otherwise, the claim that the incumbent is corrupt is interpreted as a cheap talk by the voters.\footnote{Note that it is not ex-ante rational to always dismiss (never dismiss) the politicians, even when the voters know that politicians are corrupt. This because always dismissing (never dismissing) would generate equilibrium where politicians always spend the total amount of resources, regardless of how much is needed to provide the services.} Thus, the voter only punishes the incumbent when the challenger presents and convinces the voters that there is hard evidence of malfeasance. The game then ends, and payoffs are realized. The timeline for this model is as follows:
+
+\begin{enumerate}
+ \item Nature draws the optimal investment level to provide the public services.
+ \item The incumbent observes the optimal investment level and choose the expenditure.
+ \item The election starts with the challenger choosing her campaign strategy.
+ \item Voters observe the campaign and choose whether to retain or dismiss the incumbent.
+\end{enumerate}
+
+The strategic decisions in this game are the expenditure level chosen by the incumbent ($\varepsilon$), the fraction of time that the challenger invests in exposing the corrupt incumbent ($\varphi$), and the voter's decision to retain or dismiss the incumbent. Condensing the discussion above, we have the following expected utility functions. For the incumbents:
+
+\[
+U_i (\varepsilon_i; \ \eta, \ \bvphi^{*}, \ \bups^{*}, \ \varepsilon_{-i}^{*}) \ = \ u(\varepsilon_i - \eta) + B \ \Prob (\upsilon_i = 1 \ | \ \psi, \dd) 
+\]
+
+Where $B$ is the reward for staying in office (assumed the same for every player) and $\Prob (\upsilon_i = 1 \ | \ \psi, \dd)$ is the probability of being retained, given $\psi$ and the exposure profile $\dd$. For a challenger $j$:
+
+\[
+U_j (\bvphi_j; \ \bvphi^{*}_{-j}, \ \bups^{*}, \ \bveps^{*}) \ = \ B \int_{0}^A \Prob (\upsilon_j = 1 \ | \ \eta, \bveps^{*}, \bvphi^{*})\mu(\eta|\bveps^{*}) d\mu(\eta) - c \sum_{i=1}^K \varphi_{ij}(\psi, \bveps^{*})
+\]
+
+With $c > 0$ being the cost of performing one full corruption exposure. Notice that the total amount spent on exposing corrupt politicians will be the sum of the amounts spent on each exposure. The representative voter's expected utility is equal to:
+
+\[
+U_V (\psi, \dd, \bups) \ = \ \indf \{\psi=G \}r_G
+\]
+
+Where $\indf$ is the indicator function for $\psi=G$ and $r_G$ the value of the public good for the voter. Notice that no $\psi=B$ is observed on the equilibrium path, as under-spending is a dominated strategy.
+
+Any retention rule selected for the voters is sequentially rational because there is no uncertainty about the results when they cast their votes. I impose the retention rule for the voter to be to dismiss all incumbents when $\psi=B$ or replace incumbents that were successfully exposed by challengers when $\psi=G$. This rule is ex-post efficient as over-dismissal would make incumbents pocket all the money regardless of $\eta$.
+
+I solve this game for a \textit{Perfect Bayesian Equilibrium} \citep{Fudenberg1991book, Fudenberg1991}, and as this is a signaling game, I also use \textit{universal divinity} as the equilibrium selection criteria \citep{BanksSobel1987}.\footnote{The restriction imposed by the universal divinity requires that the challengers, facing a deviation from the equilibrium path, put probability one on the type that is more likely to deviate. Moreover, as we have a continuum of types, we use the approach by \citet{Malaith1987}, which consists in finding the monotonicity in the payoffs and single crossing conditions, characterizing the behavior of the types inside the intervals of the type space, analyzing the incentives to pool or separate among the types.}
+
+\begin{definition}
+ \label{def_eqn}
+ A Perfect Bayesian Equilibrium for the game described, with $|I|=K$ and $|C|=L$, $K$ and $L$ in $\mathbb{N}$, type space $T=[0,A]$, consists in optimal strategies $\bveps^{*}$, $\bvphi^{*}$, $\bups^{*}$ and beliefs $\mu^*$, that satisfy
+ \begin{enumerate}
+  \item $\forall t_i \in T$, $\varepsilon^{*}_i(t_i)$ maximizes $ U_i (\varepsilon_i; \ t_i, \ \bvphi^{*}, \ \bups^{*}, \ \varepsilon_{-i}^{*}) $ $\forall i \in \{1, \cdots, K\}$.
+  \item $\forall \bveps \in \left[0,A \right]^K $ and $\psi \in \{B, \ G \}$, $\bvphi^{*}_j(\bveps, \psi)$ maximizes $ U_j (\bvphi_j; \ \bvphi^{*}_{-j}, \ \bups^{*}, \ \bveps^{*}, \ \mu^*) $, $\forall j \in \{1, \cdots, L\}$
+  \item $\forall \psi \in \{B, \ G \}$ and $\dd \in \{0,1\}^L$, $\bups^{*}(\psi, \dd)$ maximizes $ U_V (\psi, \dd, \bups^*) $.
+  \item The beliefs are derived using Bayes rule whenever possible, and for all $\varepsilon_i$ that are off-the-equilibrium path, $\mu^*(t_i| \varepsilon_i)>0$ (in fact, 1) only if $\widehat{\varepsilon}_i \in \arg \min_{t_i} p(t_i, \widehat{\varepsilon}_i)$, where $ p(t_i, \widehat{\varepsilon}_i)$ is the profit from deviating from $\varepsilon_i$ to $\tilde{\varepsilon}_i$ for a type $t_i$.
+ \end{enumerate}
+\end{definition}
+
+Note four characteristics of the model proposed. First, the incumbent politicians always embezzle some amount in equilibrium. Second, conditional on the benefits from holding office, to spend less than the optimal investment is harmful to the incumbent. In concrete terms, this means that politicians' first aim is to be elected. If the voter always dismisses the politician, then the politician will always say that the good costs $A$. Third, the voters always receive the public goods, regardless of the amount of money embezzled. The voter decides to punish the corrupt incumbent to discipline the incumbent's behavior, minimizing the rents extracted. Finally, this model has no ideological proximity, or affinity between the voter and any of the politicians: the paper aims to explore the incentives for corruption, not the trade-offs between ideology and corruption. Ideology is vital to understand why voters may not want to punish a corrupt politician, but this is not the main point of this paper, and adding this to the paper only blurs the logic of the argument. I now solve the model for the scenarios relevant to this paper.
+
+\subsection{One incumbent and one challenger}
+
+Applying backward induction, the voters retain the incumbent if the policy result was good and no corruption was exposed. From the challenger's perspective, as there is no cost of entry, she decides whether to invest or not her campaign resources in exposing the incumbent. She does so when the expected utility of exposing is higher than or equal the expected utility of not exposing, given her beliefs about the real value of $\eta$. Thus:
+
+\[
+B \int_{t_i \in T} \Prob (\bups = (0,1)\ | \ \eta, \varepsilon^*, \varphi)\mu^*(t_i|\varepsilon^*) d\mu - c \varphi(\psi, \varepsilon^*) \geq 0
+\]
+
+Rearranging and applying the fact that $ \Prob(\bups = (0,1) | \varepsilon^*, \varphi ( \psi, \varepsilon^*), \eta) = \varphi(\psi, \varepsilon^*) \lambda(\varepsilon^*-\eta) $ and $\mu^*(t_i | \varepsilon^*) = \mu(\eta) = \dfrac{f(\eta)}{\int_0^{A}f(\eta)d\eta}$ yields to:
+
+\[
+B \varphi(\psi, \varepsilon^*) \int_0^A \lambda(\varepsilon^* - \eta) \dfrac{f(\eta)}{\int_0^{A}f(\eta)d\eta} d\eta - c \varphi(\psi, \varepsilon^*)
+\]
+
+Isolating $\varphi(\psi, \varepsilon^*)$, let $\lambda_\varepsilon = \int_0^A \lambda(\varepsilon^* - \eta) \dfrac{f(\eta)}{\int_0^{A}f(\eta)d\eta} d\eta$ and $Q(B, c) = \dfrac{c}{B}$. Sequential rationality implies three distinct decisions: first, the challenger exposes the corrupt incumbent for sure whenever $\lambda_\varepsilon > Q(B, c)$; second, the challenger never exposes the corrupt incumbent when $ \lambda_\varepsilon < Q(B, c)$; and finally, the challenger is indifferent between exposing or not the corrupt incumbent when $\lambda_\varepsilon = Q(B, c)$. Optimality suggests that incumbent politicians will calibrate their rent extraction in order to make challengers indifferent between investigating or not.\footnote{To avoid a trivial equilibrium we assume that $Q < \dfrac{\int_0^A \lambda(A - \eta)f(\eta) d\eta}{\int_0^Af(\eta)d\eta} = Q^*$. If $Q \geq Q^*$, then the only equilibrium is to play $A$ regardless of $\eta$, and there will be no exposures.}
+
+In this situation, there exists $\overline{\eta}$ such that:
+
+\[
+\lambda_A = \dfrac{\int_{\overline{\eta}}^A \lambda(A - \eta)f(\eta) d\eta}{\int_{\overline{\eta}}^Af(\eta)d\eta} = Q(B, c)
+\]
+
+This equation represents the upper limit in the incumbent politician's strategy when the randomly drawn optimal expenditure is too close to the maximum expenditure. In these situations is more profitable for them to play $A$. We say that the threshold for this case is $\overline{\eta}$.
+
+Now, let $\delta(\varepsilon)$ the probability function that characterizes the amount of negative campaign chosen by the challenger when $\varepsilon \in [ 0, \ \overline{\eta}]$. The optimal $\varepsilon$ solves the equation $\lambda_\varepsilon = Q(B, c)$, making the challenger indifferent between exposing or not the incumbent's corruption. As $\lambda(.)$ has an inverse function, the optimal strategy for the incumbent is:
+
+\begin{equation*}
+\varepsilon^*(\eta) \ = \ \eta + \lambda^{-1}\left(\dfrac{c}{B}\right)
+\end{equation*}
+
+Therefore, the optimal strategy for the incumbent politician is to add a kickback $\kappa$ to the cost for providing the public good. The incumbent devises the optimal kickback to make the challenger indifferent between expose or not the corrupt incumbent. The optimal kickback is increasing in the cost of the negative campaign and decreasing in the benefit of holding office.
+
+The incumbent, on the other hand, only plays this strategy when it is incentive compatible for her. To be an optimal response, it should be a $\arg \max$ for $U_I$. Taking the derivative of $U_I$, and setting it to zero gives us the following differential equation for $\delta(\varepsilon)$:
+
+\[
+\dfrac{d \delta}{d \varepsilon} + \delta(\varepsilon)\frac{\lambda^{'}(\kappa)}{\lambda(\kappa)} = \frac{1}{B}\frac{u^{'}(\kappa)}{\lambda(\kappa)}
+\]
+
+Under the boundary condition $\delta(\kappa)=0$. The equation is a well defined first order differential equation that has a straightforward unique solution determined by the boundary condition. Solving for $\delta(\varepsilon)$, we have:
+
+\[
+\delta(\varepsilon) = \dfrac{u^{'}(\kappa)}{B\lambda^{'}(\kappa)}\left(1 - e^{\frac{\lambda^{'}(\kappa)}{\lambda(\kappa)}(\kappa-\varepsilon)}\right)
+\]
+
+Combining all these results together gives us the following lemma:
+
+\begin{lemma}
+ \label{lemma_m1}
+ A Perfect Bayesian Equilibrium for the game when there is one incumbent and one challenger is a pair of strategies and beliefs such that the optimal strategies are
+ \begin{enumerate}
+  \item For the incumbent 
+  \[
+   \varepsilon^{*}(\eta) \quad = \quad \twopd{\eta + \kappa}{0 \leq \eta \leq \overline{\eta}}{A}{\eta > \overline{\eta}}
+  \]
+  \item For the challenger
+  \[
+   \varphi^*(\varepsilon) \quad = \quad \threepdo{0}{\varepsilon < \kappa}{\delta(\varepsilon)}{\kappa \leq \varepsilon \leq \overline{\eta}}{\delta(A)}
+  \]
+ \item And the voter replaces the incumbent if there is evidence of corruption.
+ \end{enumerate}
+ Where $\lambda(.)$ is the challenger's campaign technology function. The optimal rent extraction is:
+ \[
+ \kappa = \lambda^{-1}\left(\dfrac{c}{B}\right)
+ \]
+ The upper threshold, $\overline{\eta}$, satisfies 
+ \[
+ \dfrac{\int_{\overline{\eta}}^A \lambda(A - \eta) f(\eta) d\eta}{\int_{\overline{\eta}}^A f(\eta)d\eta} - \dfrac{c}{B} = 0
+ \]
+ \[
+ \delta(\varepsilon) \ = \ \dfrac{u^{'}(\kappa)}{B\lambda^{'}(\kappa)}\left(1 - e^{\frac{\lambda^{'}(\kappa)}{\lambda(\kappa)}(\kappa-\varepsilon)}\right) 
+ \]
+ And the beliefs are updated using Bayes rule whenever possible.
+\end{lemma}
+
+The remainder of the proof and the demonstration that this strategy is indeed an equilibrium is in the Appendix. Note three critical features on this equilibrium. First, an increase in the value of office ($B$) decreases the kickbacks extracted and the amount of negative campaign. Decreases kickbacks because it becomes more profitable to be reelected vis-a-vis extract rents, and lowers the amount of negative campaign because there are fewer opportunities to detect corrupt behavior. Second, increasing the costs of exposing corruption ($c$) increases the kickbacks and decreases the amount of exposure in equilibrium. Finally, increasing the gains from extracting rents (increasing $u'$) does not change the amount of extraction, but increases the amount of negative campaign, as a form to cope with the possibility of deviating from the equilibrium. These results are intuitive but demonstrate that the model follows a reasonable logic.
+
+\subsection{One incumbent and many challengers}
+
+Let $|I|=1$ and $|C|=L$. Starting with the voters, their optimal strategy is to retain the incumbent if the incumbent provides the public good and no corruption has been uncovered. If the voters dismiss the incumbent, they randomly select a challenger with equal probability.\footnote{One might think that an optimal scheme would be to reward the challengers that uncovered the corruption scandal. The problem with this consideration is twofold: first, once the corruption has been detected, all challengers could use these facts in their campaigns, making the corruption exposure a ``non-excludable good.'' Second, even if we consider that challengers inherit the votes from the exposed incumbent, the collective action remains, as every challenger will have incentives for negative campaign, but if all do, the voter will keep choosing by chance. The equilibrium changes slightly but qualitatively, it is still worse than just one challenger.}
+
+Challengers observe $\psi$ and $\varepsilon$ and have to simultaneously compute the time to invest in negative campaign $\varphi_i$. As challengers have the same utility function, we solve for a symmetric equilibrium. Let $\lambda(\varepsilon-\eta) = \lambda_\varepsilon$. If we have $k$ players investing in a negative campaign against the incumbent politician, the probability that the incumbent gets successfully exposed and lose the election is:
+
+\[
+f(\varphi, x) = \sum_{k=0}^{L-1} {L \choose k} \varphi^k (1-\varphi)^{L-1-k} \cdot (1 - (1-\lambda_\varepsilon)^{k+x})
+\]
+
+So when $i$ decides to commit all her resources in a negative campaign, we let $x=1$ in $f$. This strategy allows us to compute the expected utility for the challenger $i$ as:
+
+\[
+\frac{B}{L}\int_0^A f(\varphi, 0) \mu(\eta|\varepsilon) d\mu + \varphi_i  \left[\frac{B}{L} \int_0^A \left( f(\varphi, 1)-f(\varphi, 0) \right) \mu(\eta|\varepsilon) d\mu - c \right]
+\]
+
+Sequential rationality requires that $\varphi_i > 0$ when this quantity is greater than zero, and zero otherwise. After some algebra, we can rewrite the critical term in the decision process as an equation $G$:
+
+\[
+G(\lambda, \varphi; L) = (1-\varphi\lambda_\varepsilon)^{L-1}\lambda_\varepsilon - Q(B, c) L
+\]
+
+Where $Q$ is defined as in the previous section: $Q(B,c) = \dfrac{c}{B}$. This equation yields to the optimal $\varepsilon$. The problem is that we will have, for each value of $\varepsilon$, a corresponding optimal value of $\varphi$, and vice-versa. As the incumbent plays first, she can choose the max-min value for $\lambda$, which is the maximum value for $\varepsilon$ that still delivers the lowest $\varphi$ possible. For a numerical example, if we assume $Q=0.15$ and $L$ ranging from $1$ to $5$, we can have a contour for the possible values for $\lambda$ in Figure \ref{fig_m2_1}.
+
+\begin{figure}[htb!]
+ \centering 
+ \includegraphics{figm21.pdf}
+ \caption{Contour plot for $G=0$ when $Q=0.15$ and $L$ ranges from $1$ to $5$}
+ \label{fig_m2_1}
+\end{figure}
+
+Making $G=0$ yields to the following optimal incumbent expenditure strategy:
+
+\[
+\varepsilon^*(\eta) = \eta + \lambda^{-1}\left( Q(B, c)\cdot L \right) = \eta + \kappa(L)
+\]
+
+Again, the actual value required to provide the service plus a kickback comprises the incumbent strategy. The kickback has the same characteristics expressed in the case with one challenger, except now it is augmented linearly by the number of challengers contesting the seat. In order to this expenditure profile be incentive compatible it has to satisfy the following differential equation in $\delta(\varepsilon)$:
+
+\[
+\delta^{'}(\varepsilon)-\delta(\varepsilon)\dfrac{\lambda^{'}(\kappa(L))}{\lambda(\kappa(L))} \ = \ \dfrac{u^{'}(\kappa(L))}{BQ(B, c)L^2}
+\]
+
+With the boundary condition $\delta(\kappa(L))=0$, we have the following optimal exposure strategy:
+\[
+\delta(\varepsilon) \ = \ \dfrac{u^{'}(\kappa(L))}{BQ(B, c)L^2} \left( 1- e^{\frac{\lambda^{'}(\kappa(L))}{\lambda(\kappa(L))}(\kappa(L)-\varepsilon)}\right)
+\]
+
+Collecting all the results leads us to the following Lemma.
+
+\begin{lemma}
+ \label{lemma_m2}
+ A Perfect Bayesian Equilibrium for the game when there is one incumbent and $L$ challengers is a pair of strategies and beliefs such that
+ \begin{enumerate}
+  \item For the incumbent
+  \[
+  \varepsilon^{*}(\eta) \quad = \quad \twopd{\eta + \kappa (L)}{0 \leq \eta \leq \overline{\eta}}{A}{\eta > \overline{\eta}}
+  \]
+  \item For each of the challengers
+  \[
+  \varphi^*(\varepsilon) \quad = \quad \threepdo{0}{\varepsilon < \kappa(L)}{\delta(\varepsilon)}{\varepsilon \in [\underline{\eta}, \ \overline{\eta}]}{\delta(A)}
+  \]
+  \item And the voter dismiss the incumbent if there is evidence of corruption, electing one of the $L$ challengers with probability $1/L$.
+ \end{enumerate}
+ Where $\lambda(.)$ is the challenger's campaign technology function. The optimal rent extraction is:
+ \[
+ \kappa(L) = \lambda^{-1}\left(L\dfrac{c}{B}\right)
+ \]
+ And the $\delta(.)$ defined as in the Appendix.
+\end{lemma}
+
+The proof with the step-by-step derivations is in the Appendix. Note here that all the comparative statics with relation to the benefit from holding office, the costs of exposing corrupt politicians, and the utility of rent extractions remain unchanged. The fundamental differences here are the effect of the number of challengers: it increases the kickbacks while decreasing the incentives for investigating the corrupt incumbent. The reason is intuitive: the more challenger added, the more the collective action problem faced by the challengers. For every individual challenger, it is better to let someone else pay the cost of a negative campaign but if all challengers reason similarly no exposures are performed in equilibrium. Thus, adding challengers increase the incentives for corruption.
+
+\subsection{Many incumbents and challengers}
+
+In multi-member districts there are more than one incumbent. All proportional representation countries, and most non-Westminster democracies use some variety of multi-member districts to elect representatives to their parliaments.\footnote{Proportional representation systems elect many representatives within a district, but also use apportionment rules to ensure proportional distribution of votes to parties. With the only difference that the apportionment rules may generate a few differences in the translation between votes and seats, in general, our representation encompasses the main features in a PR systems.} The following Lemma summarizes the case when there are many incumbents and many challengers.
+
+\begin{lemma}
+ \label{lemma_m3}
+ A Perfect Bayesian Equilibrium for the game when there are $K$ incumbents and $L$ challengers is a pair of strategies and beliefs such that
+ \begin{enumerate}
+  \item For the Incumbent
+  \[
+  \varepsilon^{*}(\eta) \ = \ \twopd{\eta + \kappa(L+K)}{0 \leq \eta \leq \overline{\eta}}{A}{\eta > \overline{\eta}}
+  \]
+  \item For the Challenger
+  \[
+  \varphi^*(\varepsilon) \ = \ \threepdo{0}{\varepsilon < \kappa(L+K)}{\delta(\varepsilon)}{\varepsilon \in [\kappa(L+K), \overline{\eta}]}{\delta(A)}
+  \]
+  \item The voters dismiss the corrupt incumbents, choosing randomly the substitutes among the $L$ challengers.
+ \end{enumerate}
+ Where $\lambda(.)$ is the challenger's campaign technology function. The optimal rent extraction is:
+ \[
+ \kappa(L+K) = \lambda^{-1}\left((L+K)\dfrac{c}{B}\right)
+ \]
+ And the $\delta(.)$ defined as in the Appendix.
+\end{lemma}
+
+The full derivation resembles the case with many challengers, and we leave for the Appendix. Qualitatively, the addition of more incumbents aggravate the collective action problems in two aspects. First, we have the free-riding problem, as politicians prefer to leave others to pay the exposing costs. Second, the absence of coordination among rival politicians increases the chances that challengers target some incumbents more than others.
+
+\subsection{Summarizing the effects of the number of incumbents and challengers}
+
+The following corollary summarizes the effects found above:
+
+\begin{corollary}
+Let the strategic interaction as summarized in the previous Lemmas. Then, increasing the number of challengers increases the incentives for corruption, as it promotes free-riding in the corruption exposures by challengers. Increasing the number of incumbents increases even further the incentives for corruption by promoting free-riding and coordination failures in the corruption exposures.
+\end{corollary}
+
+In equilibrium, the situation that induces the major incentive to embezzle is when we add challengers and incumbents simultaneously. Lowering the amount of either one of them, we also decrease the incentives for corruption, as denouncing the wrongdoing by incumbents become more profitable for challengers.
+
+To summarize the discussion in the previous Lemmas, we have the following testable hypothesis:
+
+\begin{enumerate}
+ \item[H. 1] Increasing the number of seats, keeping all other characteristics constant, increase corruption.
+ \item[H. 2] Increasing the number of competitors, keeping all other characteristics constant, increase corruption.
+\end{enumerate}
+
+These hypothesis can be rephrased in terms of the incentives they produce for challengers to use corruption information against incumbents. However, phrased in terms of corruption incentives they have the advantage to lead to testable implications.
+
+# Corruption and XXXX: Evidence from Brazilian and Italian Municipalities
 \label{sec:results}
 
-Here goes the results.
+Empirical evidence shows that electoral rules affect corruption. However, papers present often-contradictory evidence, due to the difficulty of isolating the causes of corruption using observational data. To remedy this gap, I study two quasi-natural experiments in the Brazilian context: the exogenous population thresholds for the legislature size and competition \citep{cepaluni2015politicians, britto2016corruption} and population threshold for run-off \citep{ferraz2011electoral, fujiwara2011regression}.\footnote{Some of these results were found originally by \citet{ferraz2011electoral} for runoff, and by \citet{britto2016corruption} for legislature size. I replicate their findings, mainly confirming their original assessment, and providing microfoundations for their results.} The results confirm that competitiveness and district sizes are key for corruption.
+
+\subsection{Data, Sources of Variation, and Identification Strategy}
+
+To construct the dependent variable, I use two different codings for the Brazilian Municipal Audit program. This program was launched in 2003 by the Brazilian Federal government, and since 2004 it consists of a federal audit of a random lottery of 60 municipalities. Federal auditors go to each selected town collecting evidence of inefficiencies and corruption with the use of federal transfers. \citet{brollo2013political} and \citet{avelino2016replication} coded these lotteries, each with a different focus.  \citet{brollo2013political} coded the lotteries 2 to 29, looking for \textit{broad} irregularities (incompetence) and \textit{narrow} irregularities (corruption). \citet{avelino2016replication} coded the lotteries 8 to 33, with the focus on health care transfers, coding the \textit{frequency} of detected malfeasance events, and the \textit{amount} involved.
+
+I use two population thresholds as an exogenous variation for competition, legislature size (city council district size), and competition in single-member district elections (mayoral elections). First, in 2004, the Brazilian Electoral Court ruled that the 29th Federal Constitution article that assumes a range from 9 to 21 city councilors for municipalities with less than a million inhabitants be miss-interpreted by towns. The court suggested that each municipal council should start with nine councilors, adding one councilor for every 47,619 inhabitants, which is the ratio of a million divided by 21 councilors. The electoral justice enforced the population thresholds for the council during two terms: 2004 and 2008. In 2009, the Congress amended the constitution, changing the council sizes and other council characteristics \citep{cepaluni2015politicians, britto2016corruption}. We use these thresholds as a shock on district size, and also on the competition. This because district size varies sharply with legislature size, pushing competition to also increase with these threshold variations. Second, the Brazilian electoral law mandates that municipalities with more than 200 thousand inhabitants should have a run-off for their mayoral elections \citep{fujiwara2011regression}. This emulates a single-member district with one competitor dispute (run-off), versus a single-member district with more than one competitor (no run-off). Figure \ref{empstrat} illustrates the empirical strategy.
+
+\begin{figure}[htp!]
+    \centering
+    \begin{tikzpicture}
+      \node[block] (a) {Run-off\\ threshold};
+      \node[block, below =2cm of a] (b) {Council size\\ thresholds};
+      \node[block, right =2cm of a] (c) {Competition\\ mayors' offices};
+      \node[block, below =2cm of c] (d) {Competition\\ city councils};
+      \node[block, below =2cm of d] (e) {City council \\ sizes};
+      \node[block, right =2cm of d] (f) {Corruption\\ measurements};
+      
+      \draw[line] (a.east) -- (c.west);
+      \draw[line] (b.east) -- (d.west);
+      \draw[line] (b.south) |- (e.west);
+      
+      \draw[line] (c.east) -| (f.north);
+      \draw[line] (d.east) -- (f.west);
+      \draw[line] (e.east) -| (f.south);
+      
+      \node[container, fit=(a) (b)] (es) {};
+      \node at (es.north west) [above right,node distance=0 and 0] {Exogenous Shocks};
+      
+      \node[container, fit=(c) (d)] (trc) {};
+      \node at (trc.north west) [above right,node distance=0 and 0] {Competitiveness};
+      
+      \node[container, fit=(e)] (trd) {};
+      \node at (trd.north west) [above right,node distance=0 and 0] {District Size};
+    \end{tikzpicture}
+    \caption{Empirical strategy}
+    \label{empstrat}
+\end{figure}
+
+The model starts with the institution design to measure the corruption impacts, but the empirical strategy abstracts away from the precise formulation in order to estimate the model. There are two key changed features. First, it assumes that competition relates to district size. Second, it abstracts the role of challengers, assuming that it is working on the background as postulated by the formal model. For the first caveat, I also run robustness checks, splitting the sample into above and below the median competition per seat, and the results remain as postulated (above the median the coefficient is more significant). For the second point, I show in the appendix qualitative evidence that negative campaign and corruption claims, especially aimed against mayors, are considerably larger in run-off municipalities, compared with municipalities closer to the run-off thresholds.
+
+\subsection{Results}
+
+On the top of Figure \ref{figregcoef} I apply the empirical strategy for \citet{brollo2013political} \textit{broad} and \textit{narrow} irregularities detection, and below I estimate the same models for \citet{avelino2016replication} data on incidence and amount of discovered malfeasance on health care transfers. To keep our approach consistent, I limit the data to the 2005-2008 mayoral term. The results follow below.
+
+\begin{figure}[!htb]
+ \centering 
+ \includegraphics[width=1\textwidth]{graphCoefs.pdf}
+ \caption{Regression coefficients for interplay between electoral systems, competition, and corruption}
+ \label{figregcoef}
+\end{figure}
+
+I divide the results into four quadrants, plotting the coefficients for each model I run, based on the strategy presented in Figure \ref{empstrat}.\footnote{ I run an instrumental variable regression using the legislator threshold cutoffs as an exogenous shock for candidacy, regression discontinuity design for city council size, and t-test, selecting the municipalities close to the run-off cutoff, for a run-off. The reason for not running an RDD for the run-off is the fact that there were too few cases in the right-hand size (municipalities with more than 200 thousand voters). To emulate an RDD result I restrict the sample to the municipalities with 50 thousand voters around the 200 thousand run-off threshold.} In the top-left, the broad corruption findings represent inefficiency detection. As the model has no prior hypothesis on inefficiency, I keep it here as a placebo check, in order to study a possible oversensitivity of the empirical model. As the Figure shows, no coefficient is significant for inefficiency detection.
+
+In the top-right I present the results for \citet{brollo2013political} narrow corruption charges. These estimates work as expected: more competition and larger district sizes increase the chance of detect corruption 24\% and 56\%, respectively. Run-off decreases the amount of corruption 67\%. 
+
+In the bottom-left we examine the \citet{avelino2016replication} frequency of detected corruption in health care.\footnote{ Health care is a good outcome of studying corruption incidence because it consumes a considerable portion of the municipal budget (around 25\%), and most voters in Brazil reward handsomely a good public healthcare administration \citep{fujiwara2015voting}.} As we can see, one standard deviation increase in candidates running for mayor and council increase in 20\% and 12\% the frequency of detected malfeasance, respectively.\footnote{ One standard deviation for the competition variables is 1.04 and 4.6 competitors for mayor and city council, respectively. See the Appendix for the full list of descriptive statistics.} The other coefficients are in the predicted direction, but not significant at 10 or 5\% levels. 
+
+Finally, in the bottom right we have the fraction of healthcare investments where the auditors detected incidences of corruption. Consistent with the model predictions, adding one standard deviation of mayoral and city council competitors increase the investments with corruption irregularities by 15\% and 9\%, respectively. Having run-off decreases the investments with corruption by 47\%. The city council size coefficient is in the predicted direction, but not significant at the conventional levels.
+
+In sum, the empirical results largely confirm the hypotheses \textbf{H1} and \textbf{H2} derived from the formal model. In the appendix we run a few robustness and placebo checks, to test whether the findings here are resistant to small specification changes. All results remain consistent and significant in the majority of the different specifications.
 
 # Discussion
 \label{sec:discussion}
 
-Here goes the discussion.
+This paper lays out the micro-foundations for the relation between corruption and electoral rules. It shows that challengers and incumbents have different incentives to investigate or engage in corruption activity in equilibrium. It also tests the theory using quasi-experimental variation, showing that the incentives generated by the institutions key for political corruption.
+
+Electoral systems are embedded into an array of trade-offs, and also generate many other political and representational effects within the society. Majoritarian systems are great for accountability, as they foster clarity of responsibility \citep{tavits2007clarity, xezonakis2015can}, and as this paper shows, they also promote lower levels of corruption. However, they also tend to be highly polarizing and have a considerable amount of wasted votes, which grow steadily with the number of candidates credibly competing for the seat. On the other extreme, proportional representation systems ensure less wasted votes, but parties proliferate on it. It quickly becomes ungovernable without broad coalitions and inter-party agreements, which are usually rigged by corruption in developing economies \citep{mello2018brazil}.
+
+To some extent, this paper delivers a very synthetic result: the incentives for engagement and for exposing corrupt behavior are dependent on the collective action problems generated within the political system. The results favor single-member districts with just one competitor when it comes to corruption. However, in between the extremes of single-member districts and full open-list proportional representation, some institutions work positively in fighting corruption.
+
+First, the existence of run-offs, such as in the French parliament, improves corruption outcomes without artificially limit the number of competitors. The run-off compensates the predatory competition that happens in the first round, and politicians may work to expose corruption by incumbents, lowering the incentives to corrupt behavior. 
+
+Second, threshold laws, which are harmful to the inclusion of different cleavages, may help to avoid predatory competition, decreasing corruption. Third, the results here tend to favor findings such as \citet{schleiter2014party} and \citet{schleiter2016party}, which claim that strengthening parties in proportional representation systems decrease political corruption, suggesting that closed lists may be better for lowering corruption. In my model, the rationale is because strong parties may efficiently coordinate the corruption exposures, aiming at taking down not only a single politician but also an entire corrupt rival party. Stronger parties improve coordination and lower free-riding, especially when there are a limited number of parties. 
+
+Finally, small district sizes in proportional representation, such as in the Chilean electoral system, maybe not only positive for the interplay between representation and accountability \citep{carey2011electoral}, but also in lowering corruption, when compared with large district proportional representation. The Brazilian system, with weak parties, open-list proportional representation, and large district sizes (varying between 8 and 70 legislators) proves that corruption can easily become endemic, with considerable negative impact on the quality of democracy and accountability \citep{avis2016government, mello2018brazil}.
 
 \newpage
 \setlength{\parindent}{0cm}
