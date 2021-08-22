@@ -55,7 +55,7 @@ knitr::knit_hooks$set(chunk = function(x, options) {
 # Formal Model
 \label{app:specs}
 
-Consider three sets of players: a set of incumbents $ I \ = \ \{ I_1, \ \cdots, \ I_K \}$, a set of challengers $C \ = \ \{ C_1, \ \cdots, \ C_L \}$, and a continuum of $V$ voters.
+Consider a strategic interaction with three sets of players: a set of incumbents $ I \ = \ \{ I_1, \ \cdots, \ I_K \}$ and a set of challengers $C \ = \ \{ C_1, \ \cdots, \ C_L \}$, and a representative voter $V$.
 
 Each incumbent has a budget of $A$ units, that has to be invested in public goods. The level of expenditure necessary to provide the goods is a random variable $\eta \in [0,A]$, where $\eta \sim f(\eta)$, and $f$ is a weakly increasing PDF function with CDF $F$. If the public goods are successfully provided, we say that the policy result is good ($\psi = G$). Otherwise, we say the policy result is bad ($\psi = B$).
 
