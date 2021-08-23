@@ -40,14 +40,27 @@ knitr::opts_chunk$set(echo = TRUE)
 # XXXX
 ```
 
-[^umberto]: Visiting Assistant Professor, Quantitative Theory and Methods Department, Emory University, <umberto.mignozzetti@emory.edu>, <http://umbertomig.com>. Corresponding author.
+[^umberto]: Visiting Assistant Professor, Quantitative Theory and Methods Department, Emory University, <umberto.mignozzetti@emory.edu>, <http://umbertomig.com>.
 
 \newpage
 
 # Introduction
 \label{sec:intro}
 
-The design of electoral institutions is key for political accountability and representation \citep{cox1997making, manin1999elections, carey2011electoral, shugart2017votes, taylor2017impact}. Electoral rules influence incentives that politicians face when they are in office, public service provision, reelection and survival in office, campaign strategies, and incumbency advantages, among other characteristics. One particular consequence of electoral rules is their effect on corruption \citep{Persson2003, Kunicova2005, chang2007electoral, charron2011party, alfano2014electoral, schleiter2014party, xezonakis2015can, schwindt2016corruption}.
+Corruption is one of the most prevalent and harmful diseases of developing countries. Corruption lowers public goods provision \citep{banerjee201227, beekman2014corruption}, decreases foreign investments \citep{habib2002corruption}, stunt economic growth \citep{mauro1995corruption, grundler2019corruption}, and affects human capital investments \citep{ferraz2012corrupting}. Corruption also have nefarious effects on trust \citep{sole2018trust}, attitudes toward political parties \citep{winters2015political}, and fuels the distrust in the political system \citep{mignozzetti2019brazil}. Investigating institutional designs that lower corruption is essential to improve short and long-term welfare.
+
+One crucial feature of political corruption is that it is perpetrated by politicians. While bureaucratic corruption may be more frequent, it is also easier to sanction and XXXX \citep{XXXX}. Political corruption, on the other hand, involves higher rents \citep{XXXX}, has a more disruptive effects on the political system \citep{XXXX}, and frequently goes unpunished \citep{XXXX}. For instance, one of the major corruption scandals in Brazil, the Car Wash operation, involved politicians in XXXX parties, and amounted to XXXX in rents and XXXX. The efforts to punish the politicians involved failed as the last two presidents undercut the ability of the public prosecutors of XXXX.
+
+This prompts the question: is there a XXXX in the design of the political system that could lower the incentives for political corruption?
+
+As politicians are the XXXX of political corruption, understanding the incentives they face for reelection could help XXXX to XXXX, lowering their incentives to engage in corruption.
+
+The design of electoral systems affect several XXXX, such as accountability and representation XXXX \citep{XXXX}, public service provision XXXX, reelection and survival in office XXXX, campaign strategies XXXX, incumbency advantages XXXX, among other XXXX. The same incentives that promote service provision and accountability could be manipulated to deliver lower political corruption. However, 
+
+This idea have been XXXX by scholars XXXX. One important XXXX is the impact of XXXX on political corruption. , one particular XXXX is the impact particular consequence of electoral rules is their effect on corruption \citep{Persson2003, Kunicova2005, chang2007electoral, charron2011party, alfano2014electoral, schleiter2014party, xezonakis2015can, schwindt2016corruption}.
+
+
+Scholars have been investigating the correlation between features in the electoral system and corruption, but to this date, there is no consensual prescription about the use of electoral rules to lower political corruption. For instance, XXXX.
 
 Despite the large body of literature on incentives that electoral system creates for corruption, two problems remain sparse. On the one hand, the roles of challengers in coping or boosting corruption incentives remain unclear. Although challengers are not the politicians that embezzle money, their campaign strategies may not only communicate with voters about her platform but also hold the incumbent's accountable by exposing their malfeasances once in office.\footnote{According to  \citet{polborn2006informative}, negative campaign is useful as it reveals information about candidates that they would now be willing to reveal by themselves. This paper rationalizes the idea that negative campaign, such as exposing a corrupt past, maybe even desirable from the perspective of voter's welfare.}
 
