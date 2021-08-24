@@ -70,10 +70,10 @@ Finally, the voters have to decide whether to retain or dismiss the incumbents, 
 The time-line of the game is as follows:
 
 \begin{enumerate}
- \item The nature draws $\eta$;
- \item Each incumbent observes $\eta$ and chooses, simultaneously, $\e$;
- \item $\psi$ is realized. Challengers choose, also simultaneously, whether to invest resources to expose corrupt incumbents;
- \item The vector of successfully exposed incumbents $\dd$ are realized. The voter chooses $\bups(\psi, \ \dd)$ and the game ends.
+  \item The nature draws $\eta$;
+  \item Each incumbent observes $\eta$ and chooses, simultaneously, $\e$;
+  \item $\psi$ is realized. Challengers choose, also simultaneously, whether to invest resources to expose corrupt incumbents;
+  \item The vector of successfully exposed incumbents $\dd$ are realized. The voter chooses $\bups(\psi, \ \dd)$ and the game ends.
 \end{enumerate}
 
 An incumbent $i$'s strategy is defined as:
