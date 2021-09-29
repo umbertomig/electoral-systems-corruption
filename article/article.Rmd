@@ -1,13 +1,13 @@
 ---
 title:  |
-        | Electoral Systems, Competition, and Incentives for Corruption
+        | Electoral Competition and Incentives for Political Corruption
 author: 
   - Umberto Mignozzetti[^umberto]
 date: \today
-thanks: "I thank Livio DiLonardo, Sandy Gordon, Saad Gulzar, Cathy Hafer, Carlo Holz, Dimitri Landa, Adam Przeworski, Howard Rosenthal, Renard Sexton, Denis Stukal, and Scott Tyson for their comments. I also thank participants at APSA, MPSA, and SPSA. All materials required to replicate this study are available at <https://github.com/umbertomig/electoral-systems-corruption>."
-abstract: "What are the effects of electoral systems and competition on political corruption? In this paper, I propose a formal model of political corruption where incumbents decide how much kickbacks to add in the XXXX, and challengers may run anti-corruption campaigns against the incumbents. To understand how institutions and competition affect the results, I study two benchmarks: in the first, called the non-excludable anti-corruption campaign, successful exposure of an incumbent opens her seats to all other competitors. In the second benchmark, the excludable anti-corruption campaign, the politician successfully exposing the corruption signals competence, and voters tend to prefer her vis-a-vis the other challengers. When anti-corruption campaigns are non-excludable, an increase in the number of challengers or incumbents monotonically raises corruption. However, when anti-corruption campaigns are excludable, the number of challengers is endogenously limited. The excludability makes the free-riding in corruption exposure disappear. When I increase the number of incumbents, corruption rises less than in the non-excludable benchmark. These predictions hold empirically using quasi-experimental data from Brazilian and Italian municipalities. This study has implications for the design of electoral institutions and entry barriers in democratic elections."
+thanks: "I thank Livio DiLonardo, Sandy Gordon, Saad Gulzar, Cathy Hafer, Carlo Holz, Dimitri Landa, John Patty, Elizabeth Maggie Penn, Adam Przeworski, Howard Rosenthal, Miguel Rueda, Renard Sexton, Denis Stukal, and Scott Tyson for their comments. I also thank participants at APSA, MPSA, and SPSA. All materials required to replicate this study are available at <https://github.com/umbertomig/electoral-systems-corruption>."
+abstract: "What are the effects of electoral competition on political corruption? In this paper, I propose a formal model of political corruption where an incumbent decides how much kickbacks to add to public goods expenditure, and challengers may run anti-corruption campaigns against the incumbent. To understand how the number of competitors affect the results, I study two benchmarks: in the first, called the non-excludable anti-corruption campaign, successful exposure of an incumbent opens her seats to all other competitors. In the second benchmark, the excludable anti-corruption campaign, the politician successfully exposing the corruption signals competence, and voters tend to prefer her vis-a-vis the other challengers. When anti-corruption campaigns are non-excludable, an increase in the number of challengers raises corruption. However, when anti-corruption campaigns are excludable, the number of challengers is endogenously limited. The excludability makes the free-riding in corruption exposure disappear. These predictions hold empirically using quasi-experimental data from Brazilian and Italian municipalities. This study has implications for the design of electoral institutions."
 abstractspacing: double
-keywords: Political Corruption; District Magnitude; Single-member districts; Multi-member districts; Welfare; Brazil
+keywords: Political Corruption; Competition; Negative Campaign; Welfare; Brazil
 #jelcodes: HXXXX
 fontsize: 11pt
 margin: 2cm
@@ -47,159 +47,248 @@ knitr::opts_chunk$set(echo = TRUE)
 # Introduction
 \label{sec:intro}
 
-Corruption is one of the most prevalent and harmful XXXX of developing countries. 2B2
+Political accountability requires that voters, upon XXXX, sanction XXXX. As the electoral process creates a XXXX, voters use elections to reward beneficial XXXX and to sanction XXXX. Different from markets, the electoral sanctioning is XXXX and XXXX [@banksXXXXsundaranEconometrica].
 
-One distinctive characteristic of corruption activity is the actor perpetrating corruption. While bureaucratic corruption may be more frequent, it is also easier to sanction and to punish. Political corruption, on the other hand, involves higher rents than bribes to access public services. Political corruption is associated with XXXX large government contracts and procurement \citep{broms2019political}, have a more disruptive effects on trust in political institutions \citep{rose2001trust, sole2018trust}, and divert the bureaucracy toward rent seeking \citep{brierley2020unprincipled}. For instance, one of the major corruption scandals in the world, the Car Wash scandal in Brazil, involved more than 50 politicians, several high level bureaucrats, and about five billion US dollars in kickbacks \citep{watts2017operation}. Given the XXXX of political corruption, it is essential to create mechanisms to sanction corrupt politicians involved in wrongdoings. 
+However, when sanctioning political corruption, voters seem to have a more XXXX approach to XXXX. For instance, two cases in Latin America well illustrate this XXXX. In Argentina, XXXX. On the other hand, Jair Bolsonaro in Brazil XXXX. Albeit remarkable differences between the cases, in Bolsonaro successfully exploited the major corruption scandal uncovered in Brazilian history, and made its way to XXXX against the XXXX. In Argentina, Macri lost his reelection bid without going to runoff, because he could not credibly XXXX the uncover of XXXX that happened a few months earlier by the Argentinian justice. Therefore, what is the XXXX?
 
-In democracies, elections are the primary mechanism to sanction politicians \citep{XXXX}. In most free and fair democracies, politicians can still manipulate XXXX, XXXX, and sometimes even the XXXX. This lowers the effectiveness of the XXXX. In this context, this paper XXXX. 
+In this paper, I propose a simple theoretical model to understand the electoral sanctioning of political corruption. In the model, I investigate one main feature celebrated as a signal of a healthy democracy: the existence and abundance of electoral challengers, running against a XXXX incumbent.
 
-However, many XXXX makes voters XXXX \citep{klavsnja2017uninformed, canete2020voting, janezic2020eliciting}.  , are there electoral system features that could improve the sanctioning and lower corruption? This paper studies the XXXX. 
+My model has XXXX distinctive characteristics. First, I model political corruption as the XXXX of kickbacks in a public goods provision XXXX. The provision of the public goods usually hides the corruption involved and distract voters. However, a public good that costs considerably more than its market price XXXX. Second, challengers are the main XXXX in exposing corrupt politicians. XXXX. Finally, exposing corruption has an XXXX. Challengers have the incentive to always claim that XXXX.
 
-I investigate the interplay between the number of incumbents in a polity (electoral district sizes), the number of competitors challenging those incumbents (competitiveness), and the incentives incumbents have for engaging in corruption. I propose a model where incumbents know the optimal level of investment required for public goods provision, but challengers only see the amount that incumbents spend. Incumbents have privileged information because they are inside the government, and receive information from governmental agencies. When they propose an investment higher than the optimal amount, the public goods is provided, and they pocket the difference between the optimal amount and their proposed expenditure. Thus, in this paper, the difference between the optimal and the proposed investment is the definition of political corruption.
+I solve the model in three stages. First, I solve the model for one incumbent versus one challenger. In this case, exposing a corrupt politician has a direct effect on XXXX, as XXXX. Second, I solve the case of one incumbent versus many challengers assuming the *non-excludable benchmark*, where XXXX. 
 
-Challengers have incomplete information about the required investment in public goods provision, but they may decide to run a negative campaign against incumbents. Challengers have a prior expectation regarding the optimal investments, and they know that the higher the expenditure proposed, the more the chances that incumbents are extracting rents. They decide to run a negative campaign that aims to gather information supporting that a given incumbent is corrupt. To run a negative campaign is costly, both in terms of collecting information, and also in terms of opportunity costs of decreasing the focus on positive proposals \citep{haselmayer2019negative}. The extent through which the negative campaign is successful depends on the rents extracted by incumbents: While voters know that challengers may accuse an honest incumbent of corruption, the amount of evidence shown to voters can tilt the perception that a given incumbent is honest, triggering his or her dismissal.
+I show that, compared with the one challenger case, the *non-excludable* benchmark generates more corruption while the *excludable* benchmark generates less corruption. When there is one challenger, all the negative campaign benefits directly the challenger. In this sense, the costs of running a negative campaign are mostly paid off when taking down a corrupt politician. However, when there are more challengers, exposing corruption aggregates a free-riding incentive. Whenever the person denouncing the corruption gains directly from it, then the XXXX, On the other hand, when XXXX. The intensity of the free-riding is crucial to determine whether XXXX is XXXX.
 
-By manipulate the parameters in the model, I show that increase district magnitude increases the equilibrium level of political corruption. This because more incumbents promote coordination failures in the challengers' negative campaigning. For example, in an electoral system with one incumbent, this incumbent is the sole target of all negative campaign. In a system with two incumbents, one incumbent may be targeted with all negative campaign while the other may receive no attacks. These coordination shortcomings make the incumbents to propose higher expenditures, increasing corruption.
+XXXX.
 
-The effects of competition are less straightforward, and depend on how voters behave in face of a successful incumbent exposure. I investigate two behavioral mechanisms: \textit{Excludable} versus \textit{non-excludable} negative campaigning. In the \textit{excludable} negative campaign, if voters transfer the political support from the corrupt incumbent to the challenger that ran the negative campaign, then the political corruption decreases. This because the reward in denouncing a corrupt incumbent makes challengers more prone to run negative campaigns. More challengers mean more negative campaigning in equilibrium, and incumbents respond by proposing expenditures closer to the optimal spending level. On the other hand, in the \textit{non-excludable} negative campaign if voters, upon being convinced that the incumbent is corrupt, decide to randomly elect one challenger, then political corruption increases. This because randomly select the challenger that substitute the corrupt incumbent creates a free-riding incentive: every challenger prefers that other challengers pay the cost of negative campaign.
+This model contributes to four strands in the literature. First, it contributes with the literature on the effect of electoral systems on political corruption. XXXX. This paper shows that political competition also plays an important role to understand political corruption. But different from @charronXXXX, competition have a non-linear effect, depending on XXXX: competition in countries with widespread corruption generates free-riding incentives, as challengers know that a successful exposure benefit all of them. In countries with low corruption, XXXX. XXXX can have a beneficial or harmful effect, depending on how widespread the corruption in the country is. XXXX.
 
-This model innovates in four aspects. First, it provides a consistent and comparable definition of corruption. Despite the evidence that corruption is detrimental for countries, corruption is poorly defined. Studies have shown that there is wide variation, even within countries, in which acts are perceived as corruption \citep{peters1978political}. \citet{barr2010corruption} show that the propensity engage in corruption can be predicted by education and corruption in the country of origin. The variation is also pronounced in the willingness to punish corrupt behavior \citep{cameron2009propensities}. Despite the variability, reporting a higher than necessary cost of providing a public good seem to be overwhelmingly accepted as corruption \citep{peters1978political}.
+Second, this paper contributes to the literature on retrospective voting. XXXX.
 
-Second, this paper builds on the literature on electoral systems and corruption by proposing a simple model of the trade-offs involved in electoral rules choices. : Number of seats and entry barriers.
+Third, this paper contributes to a growing literature on the effects of political competitiveness on elections. XXXX. This paper aligns with XXXX, showing that competition can be harmful, especially in cases when XXXX.
 
-Third, my model abstracts away from other political concerns, focusing only on features of the relationship between number of challengers and number of incumbents. Recent papers have shown that corruption correlates with ideology \citep{XXXX}, in-group behavior \citep{XXXX}, and XXXX. Despite the importance of these XXXX, removing these considerations is fundamental for understanding how electoral rules affect corruption. For example, by having ideology and district size in the same model, we would be uncertain about which component (or even if the interaction between them) leads to corruption. Moreover, high polarization correlates with less punishment of corruption \citep{XXXX}, but it is unrealistic to prescribe that voters should depolarize as a way to lower corruption. The relation between polarization, ideology, and or in-group sentiments are features of the society that need to be studied in and on themselves. The strength of my model is to abstract away from these concerns, and constructing a lean model of XXXX.
+Finally, this paper contributes to a growing literature on the effects of negative campaign. XXXX. Despite the nefarious effects, negative campaign by challengers, aimed at exposing a corruption, is crucial to hold politicians accountable. When the judicial prosecution fails, the best alternative to sanction corrupt politicians is to use the electoral system, and XXXX.
 
-Finally, differences in the behavioral mechanism that voters use to reward challengers explain the empirical variations in corruption. In polities with widespread corruption, successfully exposing a corrupt politician have a small signaling effect \citep{pavao2018corruption}. This because the electorate considers the politician exposing the corrupt incumbent as as also corrupt. In these systems, increasing competition also increase the equilibrium corruption. Conversely, in countries with low corruption, voters may reward the politician exposing the corrupt incumbent. This creates an incentive for politicians to run negative campaigns, making incumbents to extract less rents in equilibrium.
-
-# Electoral Rules and Corruption
+# Elections and Political Corruption
 
 XXXX
 
-# Formal Model
+# A Model of Elections under XXXX
 \label{sec:theorymodel}
 
 Consider a strategic interaction between three players: an incumbent politician ($I$), a challenger politician ($C$), and a representative voter ($V$).
 
-The game starts in the \textit{governing stage}, with the incumbent deciding the governmental investment in public goods provision. Incumbents have a budget $R$ units, and they choose the level of investment in public goods between zero and $R$. To decide about the investment, they receive privileged information from governmental agencies about the optimal investment required to maximize voters' welfare. For example, if a politician is deciding the funding for a governmental agency, the optimal budget is the amount that makes the agency to function perfectly. Less resources than needed could decrease significantly the quality of services but more resources than needed would not improve the services much. In technical terms, the optimal amount of service provision is a random variable $\theta \in [0, R]$, that is drawn before the game starts, and it is informed to the incumbent after she wins the election. I assume that the optimal level of expenditure is drawn from a uniform probability distribution, with support in $[0, R]$.\footnote{In the online companion of this paper, I solve the model for a generic probability density function $f$, and lay down the conditions for an equilibrium.}
+The game starts in the *governing stage*, with a recently elected incumbent politician deciding the expenditure in public goods provision. Upon taking office, the incumbent learns the required expenditure to provide the public goods and services that voters need. For instance, the incumbent may learn that a school or hospital needs investments in infrastructure, and she decides how much to allocate for this. The required expenditure is only learned when the incumbent takes office, and it is her private information. I denote the required expenditure level $\theta \in [0, R]$, and the incumbent has a budget of $R > 0$ resources to invest in public goods.
 
-When deciding the public goods provision, the incumbent can choose to invest more or less money then the optimal investment level. If the incumbent decides to invest less money, I assume that the goods are not provided. This simplification matches the reality in most cases where restricting investments can cripple the entirety of the service provision. Conversely, when the incumbent proposes an expenditure higher than the required investment, I assume she pockets the difference between the proposed and the optimal expenditure. This assumption has two implications: first, the public goods are always provided, satisfying the voters' needs; second, the incumbent has an excuse and a method to extract rents. Although corruption that ensures public goods provision seem counter-intuitive, the whole principle of kickbacks presumes that the service provision is materialized. For instance, during the 2016 Brazilian World Cup, the stadiums constructed with public money were delivered for the world cup, despite the fact that they costed 1.5 to 2.5 times more than comparable stadiums in less corrupt countries \citep{XXXX}.
+But the *enacted* expenditure in public goods provision is under the incumbent's discretion. This means that, despite knowing the required investment levels, incumbents are under no obligation to spend optimally, and may invest more or less than this required investment level. For simplicity, I assume two consequences for the differences between required and enacted investments. If the incumbent decides to invest less than the required amount, I assume the public goods are not provided. This simplification matches the reality in most cases where restricting investments can cripple the entirety of the service provision. On the other hand, when they invest more than the optimal amount, they can pocket the difference as rents. These assumptions together imply that incumbents will always provide the public goods. In fact, if they care about rents, they will always over-provide the goods, to pocket the differences between the required and the proposed expenditure.
 
-After the governing stage, it starts the \textit{campaign stage}. During the campaign, the incumbent faces a challenger in an election with two characteristics. First, voters have a incumbent-bias, so that they prefer to reelect incumbents for sure when the public goods were successfully provided. This correlates with incumbency advantage findings \citep{XXXX} as well as formal models of public service provision \citep{XXXX}. Second, I assume that challengers have only one campaign instrument at their disposal: to use negative campaign against the incumbent, expose their malfeasance if present, and receive the benefits from the denouncing. Although this seems unrealistic, having only one campaign strategy helps us focus on to what extent this strategy will be employed. Moreover, when the challenger decides to run negative campaign against an incumbent, she pays a value $c>0$. This value captures the direct costs of collecting information about corruption, and also XXXX.
+This provides an interesting micro-foundation for corruption: Political corruption here are kickbacks, and public goods are always provided by corrupt politicians. This matches most cases of corruption in procurement contracts, where the government provides the goods, at a higher-than-market prices. For instance, during the 2016 Brazilian World Cup, the stadiums constructed with public money were delivered for the world cup, despite the fact that they costed 1.5 to 2.5 times more than comparable stadiums in less corrupt settings \citep{XXXX}.
 
-Finally, the last stage of the game features the representative voter observing the information gathered by the challengers, and deciding whether to sanction the incumbent. Challengers have an incentive to run negative campaign against incumbents, regardless of whether the incumbent engaged in corruption. The voters, knowing the challenger's incentives to falsely accuse incumbents, evaluate the presented evidence. The strength of the evidence correlates with the difference between the optimal expenditure and the proposed expenditure. Voters and challengers do not know the optimal expenditure, but the greater the distance between the optimal and the enacted expenditures, the easier for challengers to convince voters that the incumbents are corrupt. This assumption has empirical support is most accounting literature, as the higher the kickbacks, the harder it is to hide it from authorities \citep{XXXX}.
+After the governing stage, it starts the \textit{campaign stage}. During the campaign, the challenger learns the expenditure enacted by the incumbent $e$, and she knows that $e$ most likely higher than the required expenditure $\theta$. However, she knows that the required expenditure is a random variable, distributed uniformly between zero and $R$, and with that information, she form a belief about the optimal expenditure using Bayes' rule.
 
-The timeline for this model is as follows:
+The challenger then decides whether or not to run a negative campaign against the incumbent. As I assume that voters have an incumbent-bias,\footnote{Meaning that they prefer to reelect incumbents when the public goods were successfully provided. This correlates with incumbency advantage findings \citep{XXXX} as well as formal models of public service provision \citep{XXXX}.} so that negative campaign is the only instrument that makes voters to revise their bias toward an incumbent that successfully provided the public goods. Additionally, when the challenger decides to run negative campaign against an incumbent, she pays a value $c>0$. This value captures the direct and indirect costs of collecting information about corruption. Moreover, it also represents the potential opportunity costs of trying to convince the voters that the incumbent is corrupt.
+
+Finally, the \textit{voting stage} of the game features the representative voter observing the information presented by the challenger, and deciding whether to sanction or not the incumbent. Challengers have an incentive to run negative campaign against incumbents, regardless of whether the incumbent engaged in corruption. The representative voter, knowing the challenger's incentives to falsely accuse incumbents, evaluates the presented evidence of corruption. The strength of the evidence correlates with the difference between the required expenditure and the proposed expenditure. Voters and challengers do not know the require expenditure, but the greater the distance between the required and the enacted expenditures, the easier for challengers to convince voters that the incumbents are corrupt. This assumption has empirical support is most accounting literature, as the higher the kickbacks, the harder it is to hide it from authorities \citep{XXXX}.
+
+The timeline for this strategic interaction is as follows:
 
 \begin{enumerate}
- \item Nature draws the optimal investment level to provide the public services.
- \item The incumbent observes the optimal investment level and chooses the government investment in public goods.
- \item After the public goods provision, the election starts with the challenger choosing her campaign strategy.
- \item Voters observe the campaign and choose whether to retain or dismiss the incumbent.
+ \item Nature draws the required expenditure level to provide the public services.
+ \item The incumbent observes the required expenditure level and chooses the government's expenditure in public goods.
+ \item After the public goods provision, the election starts with the challenger deciding her campaign strategy.
+ \item The representative voter observes the campaign and the expenditure, and chooses whether to retain or dismiss the incumbent. If she dismisses the incumbent, she automatically selects the challenger.
 \end{enumerate}
 
-To differentiate between strategies and actions, I assume that the incumbent's decision for the expenditure is a function $\varepsilon: [0,R] \rightarrow [0,R]$, i. e., the decision-making process receives the information about the optimal level of public goods provision, and returns the expenditure decision. For the challenger there is a similar reasoning, and the decision to investigate the incumbent is a function $\varphi: [0,R] \rightarrow [0,1]$, that receives the expenditure decision and returns a probability of running the negative campaign. Condensing the discussion above, the incumbent, upon observing the optimal public goods provision level $\theta \in [0,R]$, decides the expenditure $\varepsilon \in [0,R]$. The benefits from pocketing resources are captured by a function $u(.)$. In the main paper, I assume it is equal to the identity function but that in the appendix I solve the model for a generic concave function. The expected utility of the incumbent also adds the benefit from winning the election $B>0$ times the probability of this event, given the optimal and enacted expenditures and the decision to investigate $\varphi$.
+To differentiate between strategies and actions, I assume that the incumbent's decision for the expenditure is a function $\varepsilon: [0,R] \rightarrow [0,R]$, i. e., the decision-making process receives the information about the required expenditure level, and returns the expenditure decision. For the challenger there is a similar reasoning, and the decision to investigate the incumbent is a function $\varphi: [0,R] \rightarrow [0,1]$, that receives the expenditure decision and returns a probability of running the negative campaign. Condensing the discussion above, the incumbent, upon observing the optimal public goods provision level $\theta \in [0,R]$, decides the expenditure $\varepsilon \in [0,R]$. The benefits from pocketing resources are captured by a function $u(.)$. In the main paper, I assume it is equal to the identity function but that in the appendix I solve the model for a generic concave function. The expected utility of the incumbent also adds the benefit from winning the election $B>0$ times the probability of this event, given the optimal and enacted expenditures and the decision to investigate $\varphi$.
 
 \[
 U_I (\varepsilon; \theta, \varphi) \ = \ u(\varepsilon - \theta) + B \mathbb{P} (\text{re-election}; \varepsilon, \theta, \varphi) 
 \]
 
-The expected utility for the challenger involves a decision in terms of the probability to win the election and the costs of running a negative campaign. This benefit from holding office  $B>0$ is multiplied by the probability that the challenger replaces the incumbent.\footnote{I assume the material and non-material benefits from office the same for both the challenger and the incumbent. This simplifies the exposition, and makes it easier to think about these benefits as salaries or other types of pecuniary benefits.} The probability that the challenger wins the election depend on the decision to run a negative campaign, the enacted expenditure, and on her beliefs about the optimal expenditure, when she observes the enacted expenditure. The beliefs are captured by a probability rule $\mu(\theta|\varepsilon)$. The challenger also decides the investigation strategy $\varphi \in [0,R]$, and if she undertakes the strategy, then she pays a cost of $c>0$.
+The expected utility for the challenger involves a decision in terms of the probability to win the election and the costs of running a negative campaign. This benefit from holding office  $B>0$ is multiplied by the probability that the challenger replaces the incumbent.\footnote{I assume the material and non-material benefits from office the same for both the challenger and the incumbent. This simplifies the exposition, and makes it easier to think about these benefits as salaries or other types of pecuniary benefits.} The probability that the challenger wins the election depend on the decision to run a negative campaign, the enacted expenditure, and on her beliefs about the required expenditure, when she observes the enacted expenditure. The beliefs are captured by a probability rule $\mu(\theta|\varepsilon)$. The challenger also decides the anti-corruption campaign strategy $\varphi \in [0,1]$ and, if she pursues the investigation, she pays a cost of $c>0$.
 
 \[
-U_C (\varphi; \varepsilon) \ = \ B \int_{0}^R \mathbb{P}(election|\varphi, \varepsilon, \theta) \mu(\theta|\varepsilon) d\mu(\theta) - c \varphi
+U_C (\varphi; \varepsilon) \ = \ B \int_{0}^\varepsilon \mathbb{P}(\text{win election}|\varphi, \varepsilon, \theta) \mu(\theta|\varepsilon) d\mu - c \varphi
 \]
 
-Finally, the voter's decisions are sequentially rational, in the sense that they are undertaken after the expenditure and investigations are undertaken. They cannot change the decisions ex-post, and this facilitates the decision rules for voters. Ex-ante, I assume that the best is to remove from office the incumbent whenever the challenger credibly shows evidence that the incumbent is corrupt. The chance that the challenger convinces the voter is a function $d(\varepsilon-\theta)$, and to simplify, I consider that this function is equal to $d(\varepsilon-\theta) = \dfrac{\varepsilon-\theta}{R}$. In the appendix, I model the decision for a generic functional form for $d(.)$.
+Finally, any voter's decision is sequentially rational, as it happens after the incumbent implements her expenditure strategy and the challenger runs the anti-corruption campaign. They cannot change the incumbent's or the challenger's decisions ex-post, and this makes it easier for me to set the decision rule of the voter. The voter's decision will be to remove the incumbent from office whenever the challenger shows credible evidence that the incumbent is corrupt.\footnote{In the appendix XXXX, I discuss why this decision rule may be optimal from the perspective of the voter. Intuitively, when compared with reelection decisions such as @ferejohnXXXX, that has a single threshold for dismissal, this decision rule partitions the voter's information set more finely. The partitioning reduces the amounts of kickbacks at a range for the random variable larger than when only the voter sanctions.} The chance that the challenger convinces the voter is a function $\lambda(\varepsilon-\theta)$, with $\lambda' > 0$ to capture the idea that more kickbacks represent a higher chance of detect corruption.\footnote{For the simulations, I use $\lambda(\varepsilon-\theta) = \dfrac{\varepsilon-\theta}{R}$. In the online appendix, I model the decision for a generic functional form for $\lambda(.)$.}
 
-I solve this game for a \textit{Perfect Bayesian Equilibrium} \citep{Fudenberg1991book, Fudenberg1991}, and as this is a signaling game, I also use \textit{universal divinity} as the equilibrium selection criteria \citep{BanksSobel1987}. The restriction imposed by the universal divinity requires that the challenger, facing a deviation from the equilibrium path, assign a probability one on for the type that is more likely to deviate. Moreover, as I have a continuum of possible investment strategies, I use the approach by \citet{Malaith1987}, which consists in finding the monotonicity in the payoffs and single crossing conditions, characterizing the behavior of the types inside the intervals of the type space, analyzing the incentives to pool or separate among the types.
+I solve this game for a \textit{Perfect Bayesian Equilibrium} \citep{Fudenberg1991book, Fudenberg1991}, and as this is a signaling game, I also use \textit{universal divinity} as the equilibrium selection criteria \citep{BanksSobel1987}. The restriction imposed by the universal divinity requires that the challenger, facing a deviation from the equilibrium path, assign a probability one on for the type that is more likely to deviate. Moreover, as I have a continuum of possible expenditure strategies, I use the approach by \citet{Malaith1987}, which consists in finding the monotonicity in the payoffs and single crossing conditions, characterizing the behavior of the types inside the intervals of the type space, analyzing the incentives to pool or separate among the types.
 
 \begin{definition}
- \label{def_eqn}
- A Perfect Bayesian Equilibrium for the strategic interaction described consists in strategic choices of the expenditure $\varepsilon$ and the negative campaign $\varphi$ such that:
+\label{def_eqn}
+A Perfect Bayesian Equilibrium for the strategic interaction described consists in strategic choices of the expenditure $\varepsilon$ and the probability of running negative campaign $\varphi$ such that:
  \begin{enumerate}
-  \item For an optimal expenditure level, $\theta \in [0,R]$, the proposed expenditure $\varepsilon$ maximizes $U_I (\varepsilon; \varphi, \theta)$.
-  \item $\forall \bveps \in \left[0,A \right]^K $ and $\psi \in \{B, \ G \}$, $\bvphi^{*}_j(\bveps, \psi)$ maximizes $ U_j (\bvphi_j; \ \bvphi^{*}_{-j}, \ \bups^{*}, \ \bveps^{*}, \ \mu^*) $, $\forall j \in \{1, \cdots, L\}$
-  \item The beliefs are derived using Bayes Rule, whenever possible. The universal divinity also requires that for all expenditure levels that are off-the-equilibrium path, $\mu(\theta| \varepsilon)>0$ (in fact, 1) only if $\widehat{\varepsilon} \in \arg \min_{\theta} p(\theta, \widehat{\varepsilon})$, where $ p(\theta, \widehat{\varepsilon})$ is the profit from deviating from the optimal $\varepsilon$ to a deviation expenditure $\tilde{\varepsilon}$, when the optimal expenditure level is $\theta$.
+  \item For a given required expenditure level, $\theta \in [0,R]$, the proposed expenditure $\varepsilon$ maximizes the incumbent's expected utility $U_I (\varepsilon; \varphi^*(\varepsilon), \theta)$.
+  \item The challenger observes the incumbent's equilibrium expenditure level $\varepsilon^*$, and decides her negative campaign strategy $\varphi$ to maximize the expected utility $ U_C (\varphi; \varepsilon^*, \mu(\theta|\varepsilon^*))$, given her beliefs $\mu(\theta|\varepsilon^*)$ about the required expenditure level $\theta$.
+  \item The voter observes $\varepsilon^*$ and the realization of $\varphi^*$ (which is either zero or one), plus the result of the anti-corruption campaign $\lambda(.) \in \{0,1\}$. She dismisses the incumbent if the anti-corruption campaign reveals corruption, and retain otherwise.
+  \item The beliefs are derived using Bayes' Rule, whenever possible. The *universal divinity* also requires that for all expenditure levels that are off-the-equilibrium path, the challenger beliefs $\mu(\theta| \varepsilon)>0$ (in fact, 1) only if the deviant type $\widehat{\varepsilon}$ is in $\widehat{\varepsilon} \in \arg \min_{\theta} p(\theta, \widehat{\varepsilon})$, where $ p(\theta, \widehat{\varepsilon})$ is the profit from deviating from the equilibrium expenditure $\varepsilon$ to a deviation expenditure $\widehat{\varepsilon}$, when the required expenditure level is $\theta$.
  \end{enumerate}
 \end{definition}
 
-Note that this model has no ideological proximity, or affinity between the voter and any of the politician. This because the paper's objective is to explore the incentives for corruption, not the trade-offs between ideology and corruption.
+Note that this model has no ideological proximity, or affinity between the voter and any of the politicians. This because the paper's objective is to explore the incentives for corruption, not the trade-offs between ideology and corruption.\footnote{For papers exploring these trade-offs, see XXXX.} In the appendix, we model a situation where there is a positive valence shock towards one of the candidates, that is known before the election. My findings, qualitatively, remain the same, with the caveat that depending on the direction of the valence shock, the incumbent extracts even more rents in equilibrium.
 
-\subsection{The Solution for the One Incumbent - One Challenger Model}
+The benchmark for the model is the one incumbent x one challenger setting. By comparing this situation with the one incumbent x multiple challengers, I show the impact of the competitiveness on the equilibrium rents. Moreover, using Monotone Comparative Statics on the equilibrium, I can show the conditions under which the rent extraction decreases as the number of challenger increases. This threshold is characterized by an XXXX of excludability $\eta$ that determines XXXX.
 
-Applying backward induction, the voters retain the incumbent if the policy result was good and no corruption was exposed. From the challenger's perspective, as there is no cost of entry, she decides whether to invest or not her campaign resources in exposing the incumbent. She does so when the expected utility of exposing is higher than or equal the expected utility of not exposing, given her beliefs about the real value of $\eta$. Thus:
+\subsection{One Incumbent x One Challenger}
 
-\[
-B \int_{t_i \in T} \Prob (\bups = (0,1)\ | \ \eta, \varepsilon^*, \varphi)\mu^*(t_i|\varepsilon^*) d\mu - c \varphi(\psi, \varepsilon^*) \geq 0
-\]
-
-Rearranging and applying the fact that $ \Prob(\bups = (0,1) | \varepsilon^*, \varphi ( \psi, \varepsilon^*), \eta) = \varphi(\psi, \varepsilon^*) \lambda(\varepsilon^*-\eta) $ and $\mu^*(t_i | \varepsilon^*) = \mu(\eta) = \dfrac{f(\eta)}{\int_0^{A}f(\eta)d\eta}$ yields to:
+Applying backward induction, the voters retain the incumbent if the incumbent provided the public goods and no corruption was found. From the challenger's perspective, as she faces no entry costs, she decides whether to run an anti-corruption campaign. She does so when the expected utility of run a negative campaign is higher than or equal the expected utility of not running a negative campaign, given her beliefs about the required level of public goods investment $\theta$. The expected utility of running a negative campaign is equal to the benefit from office $B$ times the probability of the anti-corruption campaign be successful. This probability depends on the beliefs about the true value of the required public goods investment, derived by Bayes' rule $\varepsilon$, $\mu(\theta|\varepsilon) = \dfrac{f(\theta)}{\int_0^\varepsilon f(\theta)d\theta}$, and the chance that the anti-corruption campaign works $\lambda(\varepsilon - \theta)$. All this minus the cost $c>0$ of running an anti-corruption campaign. When the anti-corruption campaign strategy is $\varphi(\varepsilon)$, the expected benefit is equal to:
 
 \[
-B \varphi(\psi, \varepsilon^*) \int_0^A \lambda(\varepsilon^* - \eta) \dfrac{f(\eta)}{\int_0^{A}f(\eta)d\eta} d\eta - c \varphi(\psi, \varepsilon^*)
+\varphi(\varepsilon)\left[B \int_0^\varepsilon \lambda(\varepsilon - \theta)\dfrac{f(\theta)}{\int_0^\varepsilon f(\theta)d\theta}d\theta - c \right] \geq 0
 \]
 
-Isolating $\varphi(\psi, \varepsilon^*)$, let $\lambda_\varepsilon = \int_0^A \lambda(\varepsilon^* - \eta) \dfrac{f(\eta)}{\int_0^{A}f(\eta)d\eta} d\eta$ and $Q(B, c) = \dfrac{c}{B}$. Sequential rationality implies three distinct decisions: first, the challenger exposes the corrupt incumbent for sure whenever $\lambda_\varepsilon > Q(B, c)$; second, the challenger never exposes the corrupt incumbent when $ \lambda_\varepsilon < Q(B, c)$; and finally, the challenger is indifferent between exposing or not the corrupt incumbent when $\lambda_\varepsilon = Q(B, c)$. Optimality suggests that incumbent politicians will calibrate their rent extraction in order to make challengers indifferent between investigating or not.\footnote{To avoid a trivial equilibrium we assume that $Q < \dfrac{\int_0^A \lambda(A - \eta)f(\eta) d\eta}{\int_0^Af(\eta)d\eta} = Q^*$. If $Q \geq Q^*$, then the only equilibrium is to play $A$ regardless of $\eta$, and there will be no exposures.}
+Running a negative campaign is a risky bet: it costs $c$ for sure, but the benefits are uncertain. The incumbent calibrates her rent extraction to make the challenger's cost-benefit equation $B \int_0^\varepsilon\left( \lambda(\varepsilon-\theta)\dfrac{f(\theta)}{\int_0^\varepsilon f(\theta)d\theta}\right)d\theta - c$ never always positive or always negative. If the challenger's cost-benefit equation is always positive, the incumbent is extracting too much rents. In this case, it is beneficial for challengers to run a negative campaign for sure ($\varphi(\varepsilon) = 1$). If the challenger's cost-benefit equation is always negative, on the other hand, the incumbents are extracting to little rents. In this case, the challenger should never run a negative campaign ($\varphi(\varepsilon) = 0$). In the always positive case, the incumbent can do better by extracting *fewer* rents. In the always negative case, the incumbent can do better by extracting *more* rents. If we consider that these two forces are at play simultaneously, they converge to a point where the challenger's cost-benefit to run an anti-corruption campaign is equal to zero. Zeroing the cost-benefit decision makes the challenger indifferent between running or not running an anti-corruption campaign. However, it could be the case that either the office benefits are too small, or the costs are too high, that even when incumbents extract all the rents possible, no anti-corruption campaign happens in equilibrium. To rule out this possibility, I assume the following:
 
-In this situation, there exists $\overline{\eta}$ such that:
+\begin{assumption}
+
+To avoid a trivial equilibrium where there is no anti-corruption campaign in equilibrium, I assume that the benefits from office $B$ and the costs to run a negative campaign $c$ are such that:
 
 \[
-\lambda_A = \dfrac{\int_{\overline{\eta}}^A \lambda(A - \eta)f(\eta) d\eta}{\int_{\overline{\eta}}^Af(\eta)d\eta} = Q(B, c)
+\dfrac{c}{B} < \int_0^R \lambda(R - \theta)f(\theta) d\theta = Q^*
 \]
 
-This equation represents the upper limit in the incumbent politician's strategy when the randomly drawn optimal expenditure is too close to the maximum expenditure. In these situations is more profitable for them to play $A$. We say that the threshold for this case is $\overline{\eta}$.
+I.e., the costs are low enough and the benefits from office are high enough to avoid a trivial equilibrium with no anti-corruption campaign.
 
-Now, let $\delta(\varepsilon)$ the probability function that characterizes the amount of negative campaign chosen by the challenger when $\varepsilon \in [ 0, \ \overline{\eta}]$. The optimal $\varepsilon$ solves the equation $\lambda_\varepsilon = Q(B, c)$, making the challenger indifferent between exposing or not the incumbent's corruption. As $\lambda(.)$ has an inverse function, the optimal strategy for the incumbent is:
+\end{assumption}
 
-\begin{equation*}
-\varepsilon^*(\eta) \ = \ \eta + \lambda^{-1}\left(\dfrac{c}{B}\right)
-\end{equation*}
-
-Therefore, the optimal strategy for the incumbent politician is to add a kickback $\kappa$ to the cost for providing the public good. The incumbent devises the optimal kickback to make the challenger indifferent between expose or not the corrupt incumbent. The optimal kickback is increasing in the cost of the negative campaign and decreasing in the benefit of holding office.
-
-The incumbent, on the other hand, only plays this strategy when it is incentive compatible for her. To be an optimal response, it should be a $\arg \max$ for $U_I$. Taking the derivative of $U_I$, and setting it to zero gives us the following differential equation for $\delta(\varepsilon)$:
+By solving for the amount of rents that makes the challenger indifferent between run or not an anti-corruption campaign, I find the incumbents rent extraction strategy.
 
 \[
-\dfrac{d \delta}{d \varepsilon} + \delta(\varepsilon)\frac{\lambda^{'}(\kappa)}{\lambda(\kappa)} = \frac{1}{B}\frac{u^{'}(\kappa)}{\lambda(\kappa)}
+\varepsilon^*(\theta) \ = \ \theta + \lambda^{-1}\left(\dfrac{c}{B}\right)
 \]
 
-Under the boundary condition $\delta(\kappa)=0$. The equation is a well defined first order differential equation that has a straightforward unique solution determined by the boundary condition. Solving for $\delta(\varepsilon)$, we have:
+The derivation, with all the details, is in the appendix. Note that strategic expenditure is equal to the required expenditure plus kickbacks. A simple inspection shows that the proposed expenditure is increasing in the cost to run the anti-corruption campaign $c$, decreasing in the office benefits $B$. Moreover, the proposed expenditure is linear on the amount of kickbacks $\lambda^{-1}\left(\dfrac{c}{B}\right)$: the proposed expenditure is equal to the required expenditure $\theta$ plus the amount of kickbacks $\lambda^{-1}\left(\dfrac{c}{B}\right)$. Note also that it could be the case that the required expenditure is high, making the strategic expenditure to be higher than the budget for some levels of $\theta$. In this case, define $\overline{\theta} = R - \lambda^{-1}\left(\dfrac{c}{B}\right)$ such that when the required expenditure surpasses this threshold, then the expenditure proposed by the incumbent equals the maximal expenditure, $\varepsilon^*(\theta) = R$.
+
+By solving for the indifference in the challenger's expected utility, I find the expenditure strategy for the incumbent. This is how a perfect Bayesian equilibrium works: by solving the game backwards, the decision of one player is usually derived by maximizing the utility of another player. To find the challenger's anti-corruption investigation strategy, I need to show that the incumbent's expenditure strategy  maximizes her expected utility. Proceeding backwards, the incumbent's expected utility is equal to the utility accrued from rents $u(\varepsilon-\theta)$ plus the benefits from holding office times the chance of win the election. The incumbent wins the election when there is no anti-corruption campaign ($1-\varphi(\varepsilon)$) or when the anti-corruption campaign fails ($\varphi(\varepsilon)(1-\lambda(\varepsilon-\theta))$).
 
 \[
-\delta(\varepsilon) = \dfrac{u^{'}(\kappa)}{B\lambda^{'}(\kappa)}\left(1 - e^{\frac{\lambda^{'}(\kappa)}{\lambda(\kappa)}(\kappa-\varepsilon)}\right)
+U_I(\varepsilon; \theta, \varphi(\varepsilon)) = u(\varepsilon - \theta) + B\left( 1-\varphi(\varepsilon) + \varphi(\varepsilon)(1-\lambda(\varepsilon - \theta)) \right)
 \]
 
-Combining all these results together gives us the following lemma:
+To maximize this equation, we take the derivative in $\varepsilon$ and equate the result to zero. This gives us the following differential equation:
+
+\[
+\dfrac{d \varphi}{d \varepsilon} + \varphi(\varepsilon)\frac{B\lambda'\left(\lambda^{-1}\left(\dfrac{c}{B}\right)\right)}{c} = \frac{u'\left(\lambda^{-1}\left(\dfrac{c}{B}\right)\right)}{c}
+\]
+
+The solution of the above equation characterizes the anti-corruption campaign decision by the challenger. Note that the equation has an unique solution when the boundary condition is well characterized. The boundary condition here states that when the challenger proposes $\varepsilon^* = \lambda^{-1}\left(\dfrac{c}{B}\right)$, this is the minimum amount of kickback possible, and it means that $\theta = 0$. In this situation, $\varphi\left(\lambda^{-1}\left(\dfrac{c}{B}\right)\right)=0$. I solve this equation for $\varphi(\varepsilon)$ in details in the online appendix. The result is:
+
+\[
+\varphi(\varepsilon) = \dfrac{u^{'}\left(\lambda^{-1}\left(\dfrac{c}{B}\right)\right)}{B\lambda^{'}\left(\lambda^{-1}\left(\dfrac{c}{B}\right)\right)}\left(1 - e^{\frac{B}{c}\lambda^{'}\left(\lambda^{-1}\left(\dfrac{c}{B}\right)\right)\left(\lambda^{-1}\left(\dfrac{c}{B}\right)-\varepsilon\right)}\right)
+\]
+
+A simple derivative check shows that when $\varepsilon$ increases, the chance of running the anti-corruption campaign increases; when the costs $c$ increase, the chance of running an anti-corruption campaign decreases; and when the benefits from office increase, the chances for running an anti-corruption campaign increases. 
+
+This anti-corruption campaign strategy works well for all incumbent's expenditures between $\lambda^{-1}\left(\dfrac{c}{B}\right)$ and $\overline{\theta}$. However, what if the incumbent expenditure is between $0$ and $\lambda^{-1}\left(\dfrac{c}{B}\right)$ or between $\overline{\theta}$ and $R$? These are *out-of-path-of-play* expenditures, and under the *universal divinity* equilibrium, we should best-respond based on the types that are more likely to deviate. Any expenditure between $0$ and $\lambda^{-1}\left(\dfrac{c}{B}\right)$ should be met with $\varphi(\varepsilon) = 0$, as the challenger's cost-benefit to run the anti-corruption campaign is negative. The interesting case is when the incumbent proposes an expenditure between $\overline{\theta}$ and $R$. In this case, the required expenditure $\theta$ is surely between $0$ and $\overline{\theta}$. Otherwise, the incumbent would have selected $R$. This signals that the incumbent is trying to get more rents than the equilibrium prescribes, and this makes the cost-benefit for the challenger positive. The challenger's best response in this case is to set $\varphi(\varepsilon) = 1$.
+
+Combining all these results together gives us the following lemma, that characterizes the equilibrium for the one incumbent versus one challenger case.
 
 \begin{lemma}
  \label{lemma_m1}
- A Perfect Bayesian Equilibrium for the game when there is one incumbent and one challenger is a pair of strategies and beliefs such that the optimal strategies are
+A Perfect Bayesian Equilibrium for the game when there is one incumbent and one challenger is a group of strategies and beliefs such that:
  \begin{enumerate}
-  \item For the incumbent 
+  \item For the incumbent, upon observing the required expenditure $\theta$, she proposes the expenditure level:
   \[
-   \varepsilon^{*}(\eta) \quad = \quad \twopd{\eta + \kappa}{0 \leq \eta \leq \overline{\eta}}{A}{\eta > \overline{\eta}}
+   \varepsilon^{*}(\theta) \quad = \quad \twopd{\theta + \lambda^{-1}\left(\dfrac{c}{B}\right)}{0 \leq \theta \leq \overline{\theta}}{A}{\theta > \overline{\theta}}
   \]
-  \item For the challenger
+  \item For the challenger, upon observing the incumbent's investment strategy $\varepsilon$, she runs an anti-corruption campaign with the probability:
   \[
-   \varphi^*(\varepsilon) \quad = \quad \threepdo{0}{\varepsilon < \kappa}{\delta(\varepsilon)}{\kappa \leq \varepsilon \leq \overline{\eta}}{\delta(A)}
+\varphi^*(\varepsilon) =
+\begin{cases}
+0 & \text{if $\varepsilon < \lambda^{-1}\left(\dfrac{c}{B}\right)$} \\
+\dfrac{u^{'}\left(\lambda^{-1}\left(\dfrac{c}{B}\right)\right)}{B\lambda^{'}\left(\lambda^{-1}\left(\dfrac{c}{B}\right)\right)}\left(1 - e^{\frac{B}{c}\lambda^{'}\left(\lambda^{-1}\left(\dfrac{c}{B}\right)\right)\left(\lambda^{-1}\left(\dfrac{c}{B}\right)-\varepsilon\right)}\right) & \text{if $\lambda^{-1}\left(\dfrac{c}{B}\right) \leq \varepsilon \leq \overline{\theta}$} \\
+1 & \text{if $\overline{\theta} < \varepsilon < A$} \\
+\dfrac{u^{'}\left(\lambda^{-1}\left(\dfrac{c}{B}\right)\right)}{B\lambda^{'}\left(\lambda^{-1}\left(\dfrac{c}{B}\right)\right)}\left(1 - e^{\frac{B}{c}\lambda^{'}\left(\lambda^{-1}\left(\dfrac{c}{B}\right)\right)\left(\lambda^{-1}\left(\dfrac{c}{B}\right)-A\right)}\right) & \text{if $\varepsilon = A$}
+\end{cases}
+\]
+ \item For the voter, upon observing the anti-corruption investigation and the proposed expenditure by the incumbent, she replaces the incumbent if there is evidence of corruption.
+ \end{enumerate}
+And the beliefs are updated using Bayes' Rule, whenever possible.
+\end{lemma}
+
+The remainder of the proof and the demonstration that this strategy is indeed an equilibrium is in the online appendix. Note three critical features on this equilibrium: First, an increase in the value of office ($B$) decreases the kickbacks extracted and the chance that the challenger runs an anti-corruption campaign. Decreases kickbacks because it becomes more profitable to be reelected vis-a-vis extract rents, and lowers the chance of an anti-corruption campaign because lower rent extraction it makes it harder to detect the corrupt behavior. Second, increasing the costs of running an anti-corruption campaign ($c$), increases the kickbacks and decreases the chance of running an anti-corruption campaign. The This because amount of exposure in equilibrium. Finally, increasing the gains from extracting rents (increasing $u'$) does not change the amount of extraction, but increases the chance that the challenger runs an anti-corruption campaign, as rents became more valuable for the incumbents. These results are intuitive, but they reinforce that the model is grounded in reasonable logic.
+
+\subsection{One Incumbent x Many Challengers}
+
+Consider a change in the previous setup whereby we add multiple challengers running against the incumbent. Starting with the voters, suppose that she learns something about the challenger that brought the corrupt incumbent down with probability $\eta \in (0,1)$. This is the case that, for example, the challenger that successfully ran the anti-corruption campaign receives a large quantity of media exposure, which helps her election bid, making the voter to prefer her vis-a-vis the other challengers. On the other extreme, there is a chance of $1-\eta$ that the voter selects one of the challengers randomly regardless of her running or not an anti-corruption campaign. In this case, each challenger has a chance of $1/L$ to get elected. I label $\eta$ the degree of excludability in the anti-corruption campaign, i.e., the extent through which the voter uses a successful anti-corruption campaign to reward the challenger running it.
+
+The degree of excludability in the anti-corruption campaign is related to how widespread corruption is. In countries like Brazil, \citet{PAVAOXXXX} show that the systemic corruption makes it almost impossible for voters to use corruption cues to reward or punish politicians. Running a campaign on corruption would pose significant costs and other challengers would free-ride on a successful anti-corruption campaign. However, in countries where corruption is low, a successful exposure of a corrupt politician carries a non-trivial premium for the successful challenger. This premium can incentivize challengers to expose corruption even more, and this could make rents plummet. In the first case, $\eta$ is low, in the second case, $\eta$ is high.
+
+Challengers observe the expenditure in public goods provision proposed by the incumbent $\varepsilon$, and have to simultaneously decide on the chance to run an anti-corruption campaign. Let the challengers be indexed in $i \in \{1, 2, \cdots, L\}$. A given challenger $i$ decides to run an anti-corruption campaign that costs $c$ compute the time to invest in negative campaign $\varphi_i$. As challengers have the same utility function, I solve for the symmetric equilibrium, with all challengers implementing the same anti-corruption campaign strategy $\varphi_i = \varphi$. If the challengers use the $\varphi$ strategy to their anti-corruption campaigns, the chance of $k$ challengers run an anti-corruption campaign, among $L-1$ challengers, follows the Binomial distribution, with $p = \varphi$ and $n = L-1$:
+
+\[
+{L-1 \choose k} \varphi^k (1-\varphi)^{L-1-k}
+\]
+
+For any given number $k$ of challengers running a negative campaign, the chance that the campaign is successful is $k\lambda(\varepsilon - \theta)$. For any given challenger, the chance that she decides to do nothing and is still elected is equal to $\dfrac{1-\eta}{L}$. The chance that she does something and is elected is equal to The decision for a given XXXX is then equal to probability XXXX.
+
+\[
+f(\varphi, x) = \sum_{k=0}^{L-1} {L-1 \choose k} \varphi^k (1-\varphi)^{L-1-k} \cdot (1 - (1-\lambda_\varepsilon)^{k+x})
+\]
+
+So when $i$ decides to commit all her resources in a negative campaign, we let $x=1$ in $f$. This strategy allows us to compute the expected utility for the challenger $i$ as:
+
+\[
+\frac{B}{L}\int_0^A f(\varphi, 0) \mu(\eta|\varepsilon) d\mu + \varphi_i  \left[\frac{B}{L} \int_0^A \left( f(\varphi, 1)-f(\varphi, 0) \right) \mu(\eta|\varepsilon) d\mu - c \right]
+\]
+
+Sequential rationality requires that $\varphi_i > 0$ when this quantity is greater than zero, and zero otherwise. After some algebra, we can rewrite the critical term in the decision process as an equation $G$:
+
+\[
+G(\lambda, \varphi; L) = (1-\varphi\lambda (\varepsilon-\theta))^{L-1}\lambda(\varepsilon-\theta) - \dfrac{c}{B} L
+\]
+
+Where $Q$ is defined as in the previous section: $Q(B,c) = \dfrac{c}{B}$. This equation yields to the optimal $\varepsilon$. The problem is that we will have, for each value of $\varepsilon$, a corresponding optimal value of $\varphi$, and vice-versa. As the incumbent plays first, she can choose the max-min value for $\lambda$, which is the maximum value for $\varepsilon$ that still delivers the lowest $\varphi$ possible. For a numerical example, if we assume $Q=0.15$ and $L$ ranging from $1$ to $5$, we can have a contour for the possible values for $\lambda$ in Figure \ref{fig_m2_1}.
+
+<!-- \begin{figure}[htb!] -->
+<!--  \centering  -->
+<!--  \includegraphics{figm21.pdf} -->
+<!--  \caption{Contour plot for $G=0$ when $Q=0.15$ and $L$ ranges from $1$ to $5$} -->
+<!--  \label{fig_m2_1} -->
+<!-- \end{figure} -->
+
+Making $G=0$ yields to the following optimal incumbent expenditure strategy:
+
+\[
+\varepsilon^*(\eta) = \eta + \lambda^{-1}\left( Q(B, c)\cdot L \right) = \eta + \kappa(L)
+\]
+
+Again, the actual value required to provide the service plus a kickback comprises the incumbent strategy. The kickback has the same characteristics expressed in the case with one challenger, except now it is augmented linearly by the number of challengers contesting the seat. In order to this expenditure profile be incentive compatible it has to satisfy the following differential equation in $\delta(\varepsilon)$:
+
+\[
+\delta^{'}(\varepsilon)-\delta(\varepsilon)\dfrac{\lambda^{'}(\kappa(L))}{\lambda(\kappa(L))} \ = \ \dfrac{u^{'}(\kappa(L))}{BQ(B, c)L^2}
+\]
+
+With the boundary condition $\delta(\kappa(L))=0$, we have the following optimal exposure strategy:
+\[
+\delta(\varepsilon) \ = \ \dfrac{u^{'}(\kappa(L))}{BQ(B, c)L^2} \left( 1- e^{\frac{\lambda^{'}(\kappa(L))}{\lambda(\kappa(L))}(\kappa(L)-\varepsilon)}\right)
+\]
+
+Collecting all the results leads us to the following Lemma.
+
+\begin{lemma}
+ \label{lemma_m2}
+ A Perfect Bayesian Equilibrium for the game when there is one incumbent and $L$ challengers is a pair of strategies and beliefs such that
+ \begin{enumerate}
+  \item For the incumbent
+  \[
+  \varepsilon^{*}(\eta) \quad = \quad \twopd{\eta + \kappa (L)}{0 \leq \eta \leq \overline{\eta}}{A}{\eta > \overline{\eta}}
   \]
- \item And the voter replaces the incumbent if there is evidence of corruption.
+  \item For each of the challengers
+  \[
+  \varphi^*(\varepsilon) \quad = \quad \threepdo{0}{\varepsilon < \kappa(L)}{\delta(\varepsilon)}{\varepsilon \in [\underline{\eta}, \ \overline{\eta}]}{\delta(A)}
+  \]
+  \item And the voter dismiss the incumbent if there is evidence of corruption, electing one of the $L$ challengers with probability $1/L$.
  \end{enumerate}
  Where $\lambda(.)$ is the challenger's campaign technology function. The optimal rent extraction is:
  \[
- \kappa = \lambda^{-1}\left(\dfrac{c}{B}\right)
+ \kappa(L) = \lambda^{-1}\left(L\dfrac{c}{B}\right)
  \]
- The upper threshold, $\overline{\eta}$, satisfies 
- \[
- \dfrac{\int_{\overline{\eta}}^A \lambda(A - \eta) f(\eta) d\eta}{\int_{\overline{\eta}}^A f(\eta)d\eta} - \dfrac{c}{B} = 0
- \]
- \[
- \delta(\varepsilon) \ = \ \dfrac{u^{'}(\kappa)}{B\lambda^{'}(\kappa)}\left(1 - e^{\frac{\lambda^{'}(\kappa)}{\lambda(\kappa)}(\kappa-\varepsilon)}\right) 
- \]
- And the beliefs are updated using Bayes rule whenever possible.
+ And the $\delta(.)$ defined as in the Appendix.
 \end{lemma}
 
-The remainder of the proof and the demonstration that this strategy is indeed an equilibrium is in the Appendix. Note three critical features on this equilibrium. First, an increase in the value of office ($B$) decreases the kickbacks extracted and the amount of negative campaign. Decreases kickbacks because it becomes more profitable to be reelected vis-a-vis extract rents, and lowers the amount of negative campaign because there are fewer opportunities to detect corrupt behavior. Second, increasing the costs of exposing corruption ($c$) increases the kickbacks and decreases the amount of exposure in equilibrium. Finally, increasing the gains from extracting rents (increasing $u'$) does not change the amount of extraction, but increases the amount of negative campaign, as a form to cope with the possibility of deviating from the equilibrium. These results are intuitive but demonstrate that the model follows a reasonable logic.
+The proof with the step-by-step derivations is in the Appendix. Note here that all the comparative statics with relation to the benefit from holding office, the costs of exposing corrupt politicians, and the utility of rent extractions remain unchanged. The fundamental differences here are the effect of the number of challengers: it increases the kickbacks while decreasing the incentives for investigating the corrupt incumbent. The reason is intuitive: the more challenger added, the more the collective action problem faced by the challengers. For every individual challenger, it is better to let someone else pay the cost of a negative campaign but if all challengers reason similarly no exposures are performed in equilibrium. Thus, adding challengers increase the incentives for corruption.
 
 \newpage
 \setlength{\parindent}{0cm}
